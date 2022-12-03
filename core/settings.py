@@ -132,7 +132,6 @@ STATICFILES_DIRS = [str(ROOT_DIR('static'))]
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-    "compressor.finders.CompressorFinder"
 ]
 
 MEDIA_ROOT = str(ROOT_DIR('media'))
