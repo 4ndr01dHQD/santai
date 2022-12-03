@@ -21,7 +21,7 @@ def main(request):
             'img': 'flower',
         },
         {
-            'title': 'Лимфодренажный массаж',
+            'title': 'Slim массаж',
             'url': 'lymphatic_drainage',
             'img': 'massage',
         },
@@ -47,8 +47,8 @@ def bali(request):
     return render(request, 'massages/bali.html')
 
 
-def lymphatic_drainage(request):
-    return render(request, 'massages/lymphatic_drainage_massage.html')
+def slim(request):
+    return render(request, 'massages/slim.html')
 
 
 def neck(request):
@@ -92,8 +92,8 @@ def massages(request):
             'img': 'flower',
         },
         {
-            'title': 'Лимфодренажный массаж',
-            'url': 'lymphatic_drainage',
+            'title': 'Slim массаж',
+            'url': 'slim',
             'img': 'massage',
         },
         {
@@ -132,6 +132,8 @@ def orders(request):
     serializer.is_valid(raise_exception=True)
     order = Order.objects.filter(phone=serializer.validated_data['phone']).first()
     today = timezone.now()
+    # todo Добавить сохранение куки, для того, что бы не долбить бэк
+    # todo Добавить рекапчу фоновую
     if order:
         if (order.updated_at + timezone.timedelta(days=1)) > today:
             return Response('Заявку можно отправлять не более раза в сутки.', status=status.HTTP_403_FORBIDDEN)

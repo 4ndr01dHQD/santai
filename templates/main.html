@@ -46,7 +46,7 @@
     <div class="container">
         <div class="services__wrapper">
             {% for massage in massages %}
-            <a href="{{massage.url}}" class="services__item">
+            <a href="/massages/{{massage.url}}" class="services__item">
                 <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
                 {{massage.title}}
                 <img src="/media/icons/arrow.svg" class="services__item__arrow" alt="">
