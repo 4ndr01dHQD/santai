@@ -10,17 +10,15 @@ window?.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.modal__wrapper');
     const modalCross = document.querySelector('.modal__cross');
     const openModal = document.querySelectorAll('.open__modal');
-    openModal.forEach(item => {
-        item.addEventListener('click', () => {
-            modal.classList.add('modal_active');
-            document.body.style.overflow = 'hidden';
-        })
+    $(openModal).on('click', () => {
+        modal.classList.add('modal_active');
+        document.body.style.overflow = 'hidden';
     })
-    modalCross.addEventListener('click', () => {
+    $(modalCross).on('click', () => {
         modal.classList.remove('modal_active')
         document.body.style.overflow = 'auto';
     })
-    modal.addEventListener('click', (e) => {
+    $(modal).on('click', (e) => {
         if (!e.target.closest(".modal__wrapper")) {
             modal.classList.remove('modal_active');
             document.body.style.overflow = 'auto';
@@ -34,6 +32,23 @@ window?.addEventListener('DOMContentLoaded', () => {
         await fetch('/orders/', {
             method: 'POST',
             body: formData
+        }).then((response) => {
+            return response.json().then(data => ({status: response.status, body: data}))
+        }).then(data => {
+            if (data.status >= 300) {
+                $.notify(data.body, "error");
+            } else {
+                $.notify(data.body, "success");
+            }
+            modal.classList.remove('modal_active')
+            document.body.style.overflow = 'auto';
+            form.reset()
+        }).catch(err => {
+            $.notify("Ошибка со стороны сервера, обратитесь позже.", "error");
+            modal.classList.remove('modal_active')
+            document.body.style.overflow = 'auto';
+            form.reset()
         });
+
     })
 })

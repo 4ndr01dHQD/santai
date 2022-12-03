@@ -140,4 +140,4 @@ def orders(request):
         order.save()
     else:
         serializer.save()
-    return Response('Ваш запрос успешно передан, ожидайте звонка', status=status.HTTP_200_OK)
+    return Response('Ваш запрос успешно передан, ожидайте звонка', status=status.HTTP_201_CREATED)
