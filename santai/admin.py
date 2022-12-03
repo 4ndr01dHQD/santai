@@ -8,3 +8,4 @@ class OrderAdmin(admin.ModelAdmin):
     date_hierarchy = 'updated_at'
     list_filter = ('is_permitted',)
     readonly_fields = ("updated_at",)
+    list_display = ("phone", "name","updated_at", "is_permitted",)

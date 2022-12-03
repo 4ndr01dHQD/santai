@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('is_permitted', models.BooleanField(default=False, verbose_name='Разрешенный?')),
                 ('name', models.CharField(max_length=255, verbose_name='Имя')),
                 ('phone', models.CharField(max_length=255, verbose_name='Телефон')),
-                ('updated_at', models.DateTimeField(auto_now=True, verbose_name='Дата начала')),
+                ('updated_at', models.DateTimeField(auto_now=True, verbose_name='Дата последнего обновления')),
             ],
             options={
                 'verbose_name': 'Звонок',

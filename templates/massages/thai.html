@@ -135,28 +135,8 @@
     </div>
 </div>
 
-<section class="form">
-    <div class="container">
-        <form class="form__wrapper form__wrapper_unit-1">
-            <div class="form__half form__half_image">
+{% include '../components/form.html' with form_type=1 %}
 
-            </div>
-            <div class="form__half">
-                <h2 class="form__title">
-                    Увидимся в Сантай
-                </h2>
-                <p class="form__subtitle">
-                    Наш специалист свяжется с вами поможет выбрать подходящую SPA процедуру.
-                </p>
-                <input type="text" name='name' placeholder="Ваше имя" class="form__input">
-                <input type="text" name='phone' placeholder="Ваш телефон" class="form__input">
-                <button type="submit" class="button_yellow">
-                    Записаться
-                </button>
-            </div>
-        </form>
-    </div>
-</section>
 
 
 {% endblock %}
