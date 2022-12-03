@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<main>
+    <section class="main">
+        {% include './components/header.html' %}
+        <div class="main__wrapper">
+            <h1 class="main__title main__title_services">
+                Список услуг
+            </h1>
+            <h2 class="main__subtitle main__subtitle_services">
+                Истинное спокойствие это покой, от которого и другие становятся спокойными.<br><br>
+                Симеон Афонский
+
+            </h2>
+        </div>
+        {% include './components/messangers.html' %}
+
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="services__wrapper">
+                {% for massage in massages %}
+                <a href="{{massage.url}}" class="services__item">
+                    <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
+                    {{massage.title}}
+                    <img src="/media/icons/arrow.svg" class="services__item__arrow" alt="">
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <div class="modal">
+        <form class="modal__wrapper">
+            <div class="modal__top">
+                <h2 class="modal__title">
+                    Увидимся в Сантай
+                </h2>
+                <div class="modal__cross">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.7838 10L19.869 1.91518C20.043 1.74093 20.043 1.45861 19.869 1.28437L18.7159 0.130628C18.6322 0.0471947 18.5185 0 18.4003 0C18.2819 0 18.1683 0.0471947 18.0847 0.130628L9.99963 8.21566L1.9146 0.130628C1.7471 -0.0368708 1.45066 -0.0366601 1.28358 0.130628L0.130681 1.28437C-0.0435603 1.45861 -0.0435603 1.74093 0.130681 1.91518L8.21571 10L0.130681 18.0848C-0.0435603 18.2591 -0.0435603 18.5414 0.130681 18.7156L1.28379 19.8694C1.36743 19.9528 1.481 20 1.5994 20C1.71781 20 1.83116 19.9528 1.91481 19.8694L9.99984 11.7843L18.0849 19.8694C18.1685 19.9528 18.2823 20 18.4005 20C18.5187 20 18.6325 19.9528 18.7161 19.8694L19.8692 18.7156C20.0432 18.5414 20.0432 18.2591 19.8692 18.0848L11.7838 10Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal__bottom">
+                <p class="modal__subtitle">
+                    Наш специалист свяжется с вами и поможет выбрать подходящую SPA процедуру.
+                </p>
+                <input type="text" name='name' placeholder="Ваше имя" class="modal__input">
+                <input type="text" name='phone' placeholder="Ваш телефон" class="modal__input">
+                <button type="submit" class="button_yellow modal__button">
+                    Записаться
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <section class="order">
+        <div class="container">
+            <div class="order__wrapper">
+                <h2 class="order__title">
+                    Запишитесь прямо сейчас
+                </h2>
+                <div class="order__bottom">
+                    <p class="order__subtitle">
+                        Свяжитесь с нами и администратор подберет подходящую для вас программу
+                    </p>
+                    <button class="button_whiteall open__modal">
+                        Записаться
+                    </button>
+                </div>
+                <img src="/media/img/тайка 14.png" alt="#" class="order__image">
+            </div>
+        </div>
+    </section>
+
+</main>
+{% endblock %}

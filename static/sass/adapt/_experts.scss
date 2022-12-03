@@ -1,0 +1,47 @@
+
+@media (max-width: 1280px) {
+    .experts{
+        &__wrapper{
+            gap: 20px;
+        }
+        &__title {
+            &__wrapper {
+               margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .experts{
+        &__wrapper{
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        &__item {
+            margin-right: 0px;
+            max-width: 450px;
+            width: 45%;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: normal;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .experts{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__item {
+            margin-right: 0px;
+            max-width: none;
+            width: 100%;
+        }
+    }
+}

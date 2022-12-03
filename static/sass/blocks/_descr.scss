@@ -1,0 +1,26 @@
+.descr {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-right: 60px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.1;
+    color: black;
+  }
+
+  img {
+    width: 100px;
+  }
+
+}

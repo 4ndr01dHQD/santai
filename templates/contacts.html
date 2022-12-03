@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="main main_header">
+    {% include './components/header.html' %}
+
+</section>
+
+<section class="contacts">
+    <div class="container">
+        <h2 class="contacts__title">
+            Контакты
+        </h2>
+
+        <div class="contacts__white">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8a2fd0e51edb348d83e7c5a2679403aaac816bb23adfd716ef9bb255fa89fbe6&amp;source=constructor"
+                    width="500" height="400" frameborder="0"></iframe>
+            <div class="contacts__white__right">
+                <div>
+                    <div class="contacts__white__row">
+                        <p class="contacts__white__title">
+                            Адрес
+                        </p>
+                        <a href="#" class="contacts__white__subtitle">
+                            <img src="/media/icons/geo.svg" alt="#">
+                            Г. Белгород, ул. Пушкина, 55
+                        </a>
+                    </div>
+                    <div class="contacts__white__row">
+                        <p class="contacts__white__title">
+                            Телефон
+                        </p>
+                        <p class="contacts__white__subtitle">
+                            +7 (915) 561-18-54
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="contacts__white__row">
+                        <p class="contacts__white__title">
+                            Email
+                        </p>
+                        <p class="contacts__white__subtitle">
+                            santai.bgd@gmail.com
+                        </p>
+                    </div>
+
+                    <div class="contacts__white__row">
+                        <p class="contacts__white__title">
+                            Часы работы
+                        </p>
+                        <p class="contacts__white__subtitle">
+                            Пн – Вс, 10:00 – 21:00
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contacts__white__row">
+                    <p class="contacts__white__title">
+                        Реквизиты
+                    </p>
+                    <p class="contacts__white__subtitle">
+                        РЕКВИЗИТЫ ООО «САНТАЙ»<br>
+                        ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «САНТАЙ»<br>
+                        ИНН 000000000<br>
+                        КПП: 00000000000000000000<br>
+                        ОГРН 00000000000000000000<br>
+                        ЮРИДИЧЕСКИЙ АДРЕС: 190000, БЕЛГОРОД, ул. Пушкина 35<br>
+                        ГЕНЕРАЛЬНЫЙ ДИРЕКТОР Ерачина Яна Викторовна
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

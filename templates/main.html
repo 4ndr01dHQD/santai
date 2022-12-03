@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="main">
+    {% include './components/header.html' %}
+
+    <div class="main__wrapper">
+        <h1 class="main__title">
+            САНТАЙ
+        </h1>
+        <div class="main__description">
+            <p class="mobile__hide">
+                Сантай - салон тайского и балийского массажа в <br>Белгороде, текст с полезной нагрузкой призванный
+                что <br>то рассказать.
+            </p>
+            <p class="mobile__show">
+                Сантай - салон тайского и<br> балийского массажа в Белгороде.
+            </p>
+        </div>
+        <div class="main__buttons">
+            <button class="button_yellow open__modal">
+                Записаться
+            </button>
+            <a href="/massages" class="button_white">
+                Список услуг
+            </a>
+        </div>
+    </div>
+    {% include './components/messangers.html' %}
+
+</section>
+<section class="descr">
+    <div class="container descr__wrapper">
+        <h2 class="descr__title">
+            Мы дарим погружение в мир массажа<br>
+            Черпая энергию из традиций тайланда
+        </h2>
+        <img src="media/img/stones.png" alt="" class="descr__image">
+    </div>
+</section>
+<section class="services">
+    <h2 class="services__title">
+        Услуги
+    </h2>
+    <div class="container">
+        <div class="services__wrapper">
+            {% for massage in massages %}
+            <a href="{{massage.url}}" class="services__item">
+                <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
+                {{massage.title}}
+                <img src="/media/icons/arrow.svg" class="services__item__arrow" alt="">
+            </a>
+            {% endfor %}
+        </div>
+        <a href="/massages" class="button_yellow services__button">
+            Полный список услуг
+        </a>
+    </div>
+</section>
+<section class="about">
+    <div class="container">
+        <div class="about__wrapper">
+            <h2 class="about__title">
+                О нас
+            </h2>
+            <p class="about__subtitle">
+                Обретите баланс, раскройте чакры посетив нас.<br>
+                Познакомтесь с настоящими мастерами, наследниками древних традиций, прямиком из тайланда.<br>
+                Команда Сантай поможет расслабиться и получить незабываемые ощущения каждому не оставив равнодушным
+                никого.
+            </p>
+            <img src="media/img/big budda.png" alt="" class="about__image">
+        </div>
+    </div>
+</section>
+<section class="special">
+    <div class="container">
+        <div class="special__wrapper">
+            <h2 class="special__title">
+                Наши специальные предложения
+            </h2>
+            <div class="special__item">
+                <img src="media/icons/special/stone_icon 1.png" alt="">
+                <p class="special__item__title">
+                    Стоун массаж
+                </p>
+                <p class="special__item__subtitle">
+                    Диагностика и лечение заболеваний сердечно-сосудистой системы
+                </p>
+            </div>
+            <div class="special__item">
+                <img src="media/icons/special/herbal-massage 2.png" alt="">
+                <p class="special__item__title">
+                    Массаж травянными мешочками
+                </p>
+                <p class="special__item__subtitle">
+                    Диагностика и лечение заболеваний сердечно-сосудистой системы
+                </p>
+            </div>
+            <div class="special__item">
+                <img src="media/icons/special/essential-oil 3.png" alt="">
+                <p class="special__item__title">
+                    Арома-ойл массаж
+                </p>
+                <p class="special__item__subtitle">
+                    Диагностика и лечение заболеваний сердечно-сосудистой системы
+                </p>
+            </div>
+        </div>
+        <a href="#" class="special__link">
+            Все услуги
+            <img src="media/icons/arrow small.png" alt=">">
+        </a>
+    </div>
+</section>
+
+{% include './components/modal.html' %}
+
+<section class="order">
+    <div class="container">
+        <div class="order__wrapper">
+            <h2 class="order__title">
+                Запишитесь прямо сейчас
+            </h2>
+            <div class="order__bottom">
+                <p class="order__subtitle">
+                        <span class="mobile__hide">
+                            Свяжитесь с нами и админисратор подберет подходящую для вас программу
+                        </span>
+                    <span class="mobile__show">
+                            Свяжитесь с нами и админисратор<br> подберет подходящую для вас<br> программу
+                        </span>
+                </p>
+                <button class="button_whiteall open__modal">
+                    Записаться
+                </button>
+            </div>
+            <img src="media/img/тайка 14.png" alt="#" class="order__image">
+        </div>
+    </div>
+</section>
+<section class="experts">
+    <div class="container">
+        <h2 class="experts__title">
+            У нас работают
+            лучшие специалисты
+        </h2>
+        <div class="experts__wrapper">
+            <div class="experts__item">
+                <div class="experts__item__image__wrapper">
+                    <img src="media/img/expert.png" alt="" class="experts__item__image">
+
+                </div>
+                <div class="experts__item__text">
+                    <p class="experts__item__title">
+                        Иванова Татьяна Михайловна
+                    </p>
+                    <p class="experts__item__subtitle">
+                        Специалист по тайскому массажу
+                    </p>
+                </div>
+            </div>
+            <div class="experts__item">
+                <div class="experts__item__image__wrapper">
+                    <img src="media/img/expert.png" alt="" class="experts__item__image">
+
+                </div>
+                <div class="experts__item__text">
+                    <p class="experts__item__title">
+                        Иванова Татьяна Михайловна
+                    </p>
+                    <p class="experts__item__subtitle">
+                        Специалист по тайскому массажу
+                    </p>
+                </div>
+            </div>
+            <div class="experts__item">
+                <div class="experts__item__image__wrapper">
+                    <img src="media/img/expert.png" alt="" class="experts__item__image">
+
+                </div>
+                <div class="experts__item__text">
+                    <p class="experts__item__title">
+                        Иванова Татьяна Михайловна
+                    </p>
+                    <p class="experts__item__subtitle">
+                        Специалист по тайскому массажу
+                    </p>
+                </div>
+            </div>
+            <div class="experts__item">
+                <div class="experts__item__image__wrapper">
+                    <img src="media/img/expert.png" alt="" class="experts__item__image">
+
+                </div>
+                <div class="experts__item__text">
+                    <p class="experts__item__title">
+                        Иванова Татьяна Михайловна
+                    </p>
+                    <p class="experts__item__subtitle">
+                        Специалист по тайскому массажу
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <div class="container reviews__wrapper">
+        <div class="reviews__left">
+            <h2 class="reviews__title">
+                Наши отзывы
+            </h2>
+            <p class="reviews__subtitle">
+                Читайте отзывы о наших специалистах:<br> <a href="#">все отзывы</a>
+            </p>
+            <p class="reviews__subtitle">
+                А так же на <a href="#">Яндекс картах</a>
+            </p>
+        </div>
+        <div class="reviews__right">
+            <div class="reviews__item">
+                <div class="reviews__item__top">
+                    <p class="reviews__item__title">
+                        Андрей
+                    </p>
+                    <img src="media/img/5 stars.png" alt="5/5" class="reviews__item__stars">
+                </div>
+                <p class="reviews__item__subtitle">
+                    Очень крутой сервис, спасибо за расслабляющий массаж, буду приходить снова.
+                </p>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__item__top">
+                    <p class="reviews__item__title">
+                        Андрей
+                    </p>
+                    <img src="media/img/5 stars.png" alt="5/5" class="reviews__item__stars">
+                </div>
+                <p class="reviews__item__subtitle">
+                    Очень крутой сервис, спасибо за расслабляющий массаж, буду приходить снова.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

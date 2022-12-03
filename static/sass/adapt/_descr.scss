@@ -1,0 +1,44 @@
+@media (max-width: 1280px) {
+    .descr {
+        &__title {
+            margin-left: 0;
+        }
+        &__image {
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .descr {
+        &__title {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-right: 10px;
+        }
+        img {
+            width: 80px;
+        }
+    }
+}
+
+@media (max-width: 776px) {
+    .descr {
+        &__title {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-right: 10px;
+        }
+        img {
+            width: 60px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .descr {
+        img {
+            display: none;
+        }
+    }
+}

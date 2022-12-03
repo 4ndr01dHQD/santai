@@ -1,0 +1,70 @@
+.modal {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    &_active {
+        display: flex;
+    }
+    &__wrapper {
+        margin: 0 10px;
+        background: #fff;
+        max-width: 450px;
+        border-radius: 5px;
+        box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+    &__top {
+        background: #D7B66F;
+        border-radius: 5px 5px 0px 0px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bottom {
+        padding: 20px 25px;
+    }
+    &__title {
+        font-family: 'Philosopher';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.1;
+        color: #FFFFFF;
+    }
+    &__cross {
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+    &__subtitle {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.1;
+        color: #343434;
+        margin-bottom: 15px;
+    }
+    &__input {
+        padding: 13px 25px;
+        display: block;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.1;
+        color: #7E7E7E;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #B3B3B3;
+    }
+    &__button {
+        width: 100%;
+        box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.25);
+        margin-top: 30px;
+    }
+}

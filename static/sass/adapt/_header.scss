@@ -1,0 +1,15 @@
+@media (max-width: 1280px) {
+    .header {
+        &__menu {
+           max-width: 400px;
+        }
+    }
+}
+
+@media (max-width: 1768px) {
+    .header {
+        &__menu {
+           display: none;
+        }
+    }
+}
