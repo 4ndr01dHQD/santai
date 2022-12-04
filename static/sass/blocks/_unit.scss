@@ -13,7 +13,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 60px;
-    line-height: 90px;
+    line-height: 1;
     color: $yellow;
   }
 
@@ -98,7 +98,7 @@
       font-weight: 400;
       font-size: 40px;
       line-height: 1.1;
-      color: #000000;
+      color: #101010;
     }
 
     &__text {
@@ -107,7 +107,7 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 26px;
-      color: #000000;
+      color: #101010;
       margin: 20px 0;
     }
 
@@ -116,7 +116,7 @@
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
-      color: #000000;
+      color: #101010;
     }
 
     &__item {
@@ -162,7 +162,7 @@
         font-weight: 300;
         font-size: 20px;
         line-height: 36px;
-        color: #000000;
+        color: #101010;
       }
 
       &__subtitle {
@@ -172,7 +172,7 @@
         font-weight: 300;
         font-size: 16px;
         line-height: 28px;
-        color: #000000;
+        color: #101010;
       }
     }
   }
@@ -184,7 +184,7 @@
       font-weight: 400;
       font-size: 22px;
       line-height: 37px;
-      color: #000000;
+      color: #101010;
       display: flex;
       align-items: center;
 

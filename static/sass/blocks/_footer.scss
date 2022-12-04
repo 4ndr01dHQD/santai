@@ -9,9 +9,9 @@
 
   &__links {
     display: flex;
-    width: 200px;
+    width: 186px;
     justify-content: space-between;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
   }
 
   &__phone {
@@ -19,7 +19,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
-    color: #000000;
+    color: #101010;
   }
 
   &__mail {
@@ -28,7 +28,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    color: #000000;
+    color: #101010;
   }
 
   &__geo {
@@ -37,7 +37,16 @@
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    color: #000000;
+    color: #101010;
+  }
+
+  &__contacts {
+    margin-top: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #101010;
   }
 
   &__left, &__right {
@@ -49,8 +58,8 @@
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
-    line-height: 27px;
-    color: #000000;
+    line-height: 1.1;
+    color: #101010;
     margin-bottom: 15px;
   }
 }

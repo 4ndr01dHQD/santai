@@ -21,8 +21,13 @@
       font-size: 16px;
       line-height: 20px;
       color: #fff;
-
+      
+      &__phone{
+        font-size: 18px;
+      }
+      
       img {
+        height: 25px;
         margin-right: 10px;
       }
 

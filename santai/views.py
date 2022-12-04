@@ -79,6 +79,10 @@ def contacts(request):
     return render(request, 'contacts.html')
 
 
+def policy(request):
+    return render(request, 'policy.html')
+
+
 def massages(request):
     massages = [
         {
