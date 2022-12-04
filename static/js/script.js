@@ -10,6 +10,15 @@ window?.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.modal__wrapper');
     const modalCross = document.querySelector('.modal__cross');
     const openModal = document.querySelectorAll('.open__modal');
+    const allow_policy = document.querySelector('.modal__allow_policy');
+    $(allow_policy).on('change', () => {
+        if (allow_policy.checked) {
+            document.querySelector('.modal__button').disabled = false
+        } else {
+            document.querySelector('.modal__button').disabled = true
+        }
+
+    })
     $(openModal).on('click', () => {
         modal.classList.add('modal_active');
         document.body.style.overflow = 'hidden';
@@ -26,9 +35,9 @@ window?.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    form.addEventListener('submit', async (e) => {
-        const formData = new FormData(e.target);
-        e.preventDefault();
+    form.addEventListener('submit', async (event) => {
+        const formData = new FormData(event.target);
+        event.preventDefault();
         await fetch('/orders/', {
             method: 'POST',
             body: formData
@@ -37,12 +46,16 @@ window?.addEventListener('DOMContentLoaded', () => {
         }).then(data => {
             if (data.status >= 300) {
                 $.notify(data.body, "error");
+                console.log(data.body)
+                event.stopPropagation()
+                event.preventDefault()
             } else {
                 $.notify(data.body, "success");
+                modal.classList.remove('modal_active')
+                document.body.style.overflow = 'auto';
+                form.reset()
             }
-            modal.classList.remove('modal_active')
-            document.body.style.overflow = 'auto';
-            form.reset()
+
         }).catch(err => {
             $.notify("Ошибка со стороны сервера, обратитесь позже.", "error");
             modal.classList.remove('modal_active')
