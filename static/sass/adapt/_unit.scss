@@ -1,5 +1,8 @@
 @media (max-width: 1280px) {
     .unit {
+        &__white {
+            margin-top: 20px;
+        }
         &__half {
             width: 50%;
         }

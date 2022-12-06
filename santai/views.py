@@ -22,7 +22,7 @@ def main(request):
         },
         {
             'title': 'Slim массаж',
-            'url': 'lymphatic_drainage',
+            'url': 'slim',
             'img': 'massage',
         },
         {
