@@ -27,3 +27,11 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    .services {
+        &__item {
+            font-size: 14px;
+        }
+    }
+}

@@ -65,6 +65,9 @@
             }
             &__half {
                 width: 100%;
+                &_right{
+                    margin-bottom: 20px;
+                }
             }
             &__item {
                 font-size: 18px;

@@ -1102,6 +1102,16 @@ h1, h2, h3, h4, h5, h6, p, a {
     right: 10px;
   }
 }
+@media (max-width: 576px) {
+  .services__item {
+    font-size: 14px;
+  }
+}
+@media (max-width: 920px) {
+  .about {
+    padding-top: 20px;
+  }
+}
 @media (max-width: 850px) {
   .header__menu__link__about {
     display: none;
@@ -1296,6 +1306,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 @media (max-width: 992px) {
+  .reviews__title {
+    width: 80%;
+  }
   .reviews__item {
     width: 80%;
   }
@@ -1413,6 +1426,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   .unit__descr__half {
     width: 100%;
   }
+  .unit__descr__half_right {
+    margin-bottom: 20px;
+  }
   .unit__descr__item {
     font-size: 18px;
     line-height: 1.1;
@@ -1451,6 +1467,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   .form__input {
     margin-bottom: 20px;
     padding: 10px;
+  }
+  .form__title {
+    margin-bottom: 60px;
+  }
+  .form__subtitle {
+    display: none;
   }
 }
 @media (max-width: 768px) {

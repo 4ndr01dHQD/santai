@@ -8,7 +8,11 @@
 }
 
 @media (max-width: 992px) {
-    .reviews {        
+    .reviews { 
+               
+        &__title {
+            width: 80%;
+        }       
         &__item {
             width: 80%;
 
