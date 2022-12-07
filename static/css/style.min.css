@@ -31,14 +31,16 @@ h1, h2, h3, h4, h5, h6, p, a {
   cursor: pointer;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 24px;
   line-height: 1.1;
   background: #D7B66F;
   color: #FFFFFF;
-  padding: 25px 55px;
+  padding: 25px 75px;
+  max-width: 360px;
+  width: 100%;
   border: none;
-  border-radius: 15px;
+  border-radius: 18px;
 }
 .button_white {
   display: flex;
@@ -48,13 +50,15 @@ h1, h2, h3, h4, h5, h6, p, a {
   cursor: pointer;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 22px;
   line-height: 1.1;
   background: transparent;
   color: #FFFFFF;
-  padding: 25px 45px;
-  border-radius: 10px;
+  padding: 25px 75px;
+  max-width: 360px;
+  width: 100%;
+  border-radius: 18px;
   border: 2px solid #FFFFFF;
 }
 .button_whiteall {
@@ -205,8 +209,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 .main__buttons {
   margin: 50px auto 0;
   display: flex;
-  justify-content: space-between;
-  max-width: 650px;
+  justify-content: space-evenly;
+  max-width: 850px;
   width: 60%;
 }
 .main__aside {
@@ -220,7 +224,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .descr {
-  padding-top: 10px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -230,7 +234,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   justify-content: center;
 }
 .descr__title {
-  margin-right: 60px;
+  margin-right: 20px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
