@@ -21,11 +21,11 @@
   }
 
   &__title {
-    font-family: 'Montserrat';
+    font-family: 'Philosopher';
     font-style: normal;
     font-weight: 500;
-    font-size: 50px;
-    line-height: 55px;
+    font-size: 40px;
+    line-height: 1.1;
     color: #FFFFFF;
   }
 
@@ -33,12 +33,11 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 27px;
     color: #FFFFFF;
     text-align: left;
-    width: 50%;
-    margin-right: 50px;
+    width: 45%;
   }
 
   &__image {
@@ -47,4 +46,9 @@
     bottom: 0;
     max-width: 200px;
   }
+
+    button{
+      font-size: 16px;
+    }
+
 }

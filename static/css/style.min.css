@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: #FFFFFF;
   padding: 25px 55px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .button_white {
   display: flex;
@@ -246,10 +246,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: "Philosopher";
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
-  line-height: 78px;
+  font-size: 40px;
+  line-height: 1.1;
   color: black;
-  text-align: center;
 }
 .services__item {
   width: 100%;
@@ -260,7 +259,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 49px;
   color: #343434;
   background: #FFFFFF;
@@ -275,7 +274,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 .services__item__arrow {
   position: absolute;
   right: 20px;
-  height: 30px;
+  height: 26px;
 }
 .services__button {
   width: -webkit-fit-content;
@@ -406,29 +405,31 @@ h1, h2, h3, h4, h5, h6, p, a {
   margin-right: 300px;
 }
 .order__title {
-  font-family: "Montserrat";
+  font-family: "Philosopher";
   font-style: normal;
   font-weight: 500;
-  font-size: 50px;
-  line-height: 55px;
+  font-size: 40px;
+  line-height: 1.1;
   color: #FFFFFF;
 }
 .order__subtitle {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 27px;
   color: #FFFFFF;
   text-align: left;
-  width: 50%;
-  margin-right: 50px;
+  width: 45%;
 }
 .order__image {
   position: absolute;
   right: 5%;
   bottom: 0;
   max-width: 200px;
+}
+.order button {
+  font-size: 16px;
 }
 
 .experts__title {
@@ -653,7 +654,8 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: "Philosopher";
   font-style: normal;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 40px;
+  margin-bottom: 20px;
   line-height: 1;
   color: #D7B66F;
 }
@@ -684,8 +686,8 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 1.1;
   display: flex;
   text-align: justify;
   color: #343434;
@@ -693,8 +695,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .unit__text img {
   margin-right: 10px;
-  height: 22px;
-  width: 22px;
+  height: 20px;
+  width: 20px;
 }
 .unit__text_small {
   margin-bottom: 10px;
@@ -708,7 +710,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .unit__descr {
   display: flex;
-  margin-top: 20px;
+  margin-top: 40px;
   justify-content: space-between;
 }
 .unit__descr__half {
@@ -860,7 +862,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: "Philosopher";
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 78px;
   color: #343434;
 }
@@ -868,7 +870,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 29px;
   margin-top: 20px;
   color: #343434;
@@ -876,6 +878,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .form__input {
   outline: none;
+  opacity: 70%;
   width: 100%;
   margin-bottom: 40px;
   padding: 20px;

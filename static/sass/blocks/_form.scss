@@ -33,7 +33,7 @@
     font-family: 'Philosopher';
     font-style: normal;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 78px;
     color: #343434;
   }
@@ -42,7 +42,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 29px;
     margin-top: 20px;
     color: #343434;
@@ -51,6 +51,7 @@
 
   &__input {
     outline: none;
+    opacity: 70%;
     width: 100%;
     margin-bottom: 40px;
     padding: 20px;
