@@ -5,10 +5,9 @@
   align-items: center;
 
   &__menu {
-    max-width: 650px;
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 30%;
 
     &__link {
       height: 17px;
@@ -36,6 +35,15 @@
           margin-right: 10px;
         }
       }
+    }
+
+    &__link:hover{
+      color: #D7B66F;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    }
+    &__link:hover > img{
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+      filter: invert(55%) sepia(75%) saturate(253%) hue-rotate(360deg) brightness(92%) contrast(83%);
     }
   }
 }

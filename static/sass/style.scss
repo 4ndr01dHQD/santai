@@ -40,11 +40,27 @@ $yellow: #D7B66F;
     background: #D7B66F;
     color: #FFFFFF;
     padding: 25px 75px;
-    max-width: 360px;
+    border-width: 2px;
+    border-style: solid;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     width: 100%;
-    border: none;
+    border-color:#ffffff00;
     border-radius: 18px;
   }
+
+  &_to_bordered_white:hover {
+    border-color:#FFFFFF;
+    background: unset;
+    color: white;
+  }
+
+  &_to_bordered_yellow:hover {
+    border-color:#D7B66F;
+    color:#D7B66F;
+    -webkit-filter: drop-shadow(5px 5px 10px #D7B66F);
+    background: unset;
+  }
+
 
   &_white {
     display: flex;
@@ -52,6 +68,7 @@ $yellow: #D7B66F;
     align-items: center;
     max-height: 80px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
@@ -60,10 +77,16 @@ $yellow: #D7B66F;
     background: transparent;
     color: #FFFFFF;
     padding: 25px 75px;
-    max-width: 360px;
+    border-width: 2px;
+    border-style: solid;
     width: 100%;
     border-radius: 18px;
-    border: 2px solid #FFFFFF;
+    border-color:#FFFFFF;
+  }
+
+  &_to_filled_yellow:hover {
+    border-color: #ffffff00;
+    background: #D7B66F;
   }
 
   &_whiteall {
@@ -84,6 +107,10 @@ $yellow: #D7B66F;
     line-height: 37px;
     color: #101010;
     padding: 15px 25px;
+    border-width: 2px;
+    border-style: solid;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border-color:#ffffff00;
   }
 }
 

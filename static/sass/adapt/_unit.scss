@@ -1,8 +1,6 @@
 @media (max-width: 1280px) {
     .unit {
-        &__white {
-            margin-top: 20px;
-        }
+        
         &__half {
             width: 50%;
         }
@@ -49,7 +47,6 @@
 
 @media (max-width: 768px) {
     .unit {
-        padding-top: 0;
         &__descr {
             margin-top: 10px;
             display: block;
