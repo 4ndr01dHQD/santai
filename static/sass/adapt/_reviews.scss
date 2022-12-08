@@ -21,7 +21,8 @@
 }
 
 @media (max-width: 768px) {
-    .reviews {        
+    .reviews {  
+        justify-content: start;      
         &__item {
             width: 100%;
 
