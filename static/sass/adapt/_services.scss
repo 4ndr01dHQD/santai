@@ -11,6 +11,9 @@
 
 @media (max-width: 768px) {
     .services {
+        &__title {
+            font-size: 34px;
+          }
         &__item {
             font-size: 20px;
             border-radius: 10px;
