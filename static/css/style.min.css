@@ -436,9 +436,11 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .special__item:hover {
   background: #D7B66F;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 .special__item:hover > .special__item__title, .special__item:hover > .special__item__subtitle {
   color: white;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 .special__item:hover > img {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;

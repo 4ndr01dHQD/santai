@@ -71,9 +71,11 @@
   }
   &__item:hover {
     background: #D7B66F;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   }
   &__item:hover  > .special__item__title, &__item:hover  >.special__item__subtitle{
     color: white;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   }
   &__item:hover > img {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
