@@ -69,4 +69,14 @@
       color: #101010;
     }
   }
+  &__item:hover {
+    background: #D7B66F;
+  }
+  &__item:hover  > .special__item__title, &__item:hover  >.special__item__subtitle{
+    color: white;
+  }
+  &__item:hover > img {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    filter:invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%);
+  }
 }
