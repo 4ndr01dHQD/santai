@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="main main_header">
+    {% include '../components/header.html' %}
+
+</section>
+
+
+<section class="unit">
+    <div class="container">
+        <div class="unit__white">
+            <div class="unit__top">
+                <h2 class="unit__title">
+                    Гавайский массаж Ломи-Ломи
+                </h2>
+            </div>
+            <div class="unit__center">
+                <div class="unit__half">
+                    <img class="unit__image" src="/media/img/massages/hawaii.png" alt="massage">
+                </div>
+                <div class="unit__half">
+                    <p class="unit__description">
+                        В переводе означает «нежное касание бархатной лапки довольного кота». Эта техника гармонизирует
+                        тело и душу, а один из её основных приёмов- проработка локтями.
+                    </p>
+                    <p class="unit__text unit__text_small">
+                        <img src="/media/icons/time.svg" alt="">
+                        60 мин 3200р.
+                    </p>
+                    <p class="unit__text unit__text_small">
+                        <img src="/media/icons/time.svg" alt="">
+                        90 мин 4200р.
+                    </p>
+                    <p class="unit__text">
+                        <img src="/media/icons/time.svg" alt="">
+                        120 мин 5200р.
+                    </p>
+                    <button class="button_yellow open__modal button_to_bordered_yellow">
+                        Записаться
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="unit__descr">
+            <div class="unit__descr__half">
+                <h2 class="unit__descr__title">
+                    Польза массажа
+                </h2>
+                <ul class="unit__descr__list">
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/man-running.png" alt=""> Снимает усталость, напряжение
+                    </li>
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/biceps.png" alt=""> Расслабляет мышцы
+                    </li>
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/man-in-lotus.png" alt=""> Высвобождает позитивную энергию
+                    </li>
+                </ul>
+            </div>
+            <div class="unit__descr__half unit__descr__half_right">
+                <h2 class="unit__descr__title">
+                    Сеанс проводит
+                </h2>
+                <div class="unit__descr__card">
+                    <div class="unit__descr__card__wrapper">
+                        <img src="/media/img/card.png" alt="" class="unit__descr__card__image">
+                    </div>
+                    <div class="unit__descr__card__bottom">
+                        <p class="unit__descr__card__title">
+                            Иванова Татьяна Михайловна
+                        </p>
+                        <p class="unit__descr__card__subtitle">
+                            Специалист по тайскому массажу
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% include '../components/modal.html' %}
+
+
+<div class="unit">
+    <div class="container">
+        <div class="unit__bottom">
+            <a href="/massages/" class="unit__bottom__link">
+                Все услуги
+                <img src="/media/icons/arrow small.png" alt="">
+            </a>
+            <p class="unit__bottom__descr">
+                Обретите баланс, раскройте чакры посетив нас.<br>
+                Познакомтесь с настоящими мастерами, наследниками древних традиций, прямиком из тайланда.<br>
+                Команда Сантай поможет расслабиться и получить незабываемые ощущения каждому не оставив равнодушным
+                никого.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% include '../components/form.html' with form_type=2 %}
+
+{% endblock %}

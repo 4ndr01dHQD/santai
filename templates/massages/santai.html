@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="main main_header">
+    {% include '../components/header.html' %}
+
+</section>
+
+{% include '../components/modal.html' %}
+
+<section class="unit">
+    <div class="container">
+        <div class="unit__white">
+            <div class="unit__top">
+                <!-- todo Поправить картинку, минимум избавить от водяных знаков -->
+                <h2 class="unit__title">
+                    SANTAI массаж
+                </h2>
+
+            </div>
+            <div class="unit__center">
+                <div class="unit__half">
+                    <img class="unit__image" src="/media/img/massages/santai.png" alt="massage">
+                </div>
+                <div class="unit__half">
+                    <p class="unit__description">
+                        Фирменный массаж сочетает в себе различные виды восточного массажа. Мастер интуитивно и
+                        индивидуально подбирает технику массажа. Используется комбинация балийского, тайского, шведского
+                        и массажа шиатцу.
+                    </p>
+                    <p class="unit__text unit__text_small">
+                        <img src="/media/icons/time.svg" alt="">
+                        60 мин 3400р.
+                    </p>
+                    <p class="unit__text unit__text_small">
+                        <img src="/media/icons/time.svg" alt="">
+                        90 мин 4400р.
+                    </p>
+                    <p class="unit__text ">
+                        <img src="/media/icons/time.svg" alt="">
+                        120 мин 5400р.
+                    </p>
+                    <button class="button_yellow open__modal button_to_bordered_yellow">
+                        Записаться
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="unit__descr">
+            <div class="unit__descr__half">
+                <h2 class="unit__descr__title">
+                    Польза массажа
+                </h2>
+                <ul class="unit__descr__list">
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/man-in-steamy-room.png" alt=""> Полное расслабление
+                    </li>
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/man-in-lotus.png" alt=""> Восстановление энергетического баланса
+                    </li>
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/man-running.png" alt=""> Улучшение общего самочувствия
+                    </li>
+                </ul>
+            </div>
+            <div class="unit__descr__half unit__descr__half_right">
+                <h2 class="unit__descr__title">
+                    Сеанс проводит
+                </h2>
+                <div class="unit__descr__card">
+                    <div class="unit__descr__card__wrapper">
+                        <img src="/media/img/card.png" alt="" class="unit__descr__card__image">
+                    </div>
+                    <div class="unit__descr__card__bottom">
+                        <p class="unit__descr__card__title">
+                            Иванова Татьяна Михайловна
+                        </p>
+                        <p class="unit__descr__card__subtitle">
+                            Специалист по тайскому массажу
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<div class="unit">
+    <div class="container">
+        <div class="unit__bottom">
+            <a href="/massages/" class="unit__bottom__link">
+                Все услуги
+                <img src="/media/icons/arrow small.png" alt="">
+            </a>
+            <p class="unit__bottom__descr">
+                Обретите баланс, раскройте чакры посетив нас.<br>
+                Познакомтесь с настоящими мастерами, наследниками древних традиций, прямиком из тайланда.<br>
+                Команда Сантай поможет расслабиться и получить незабываемые ощущения каждому не оставив равнодушным
+                никого.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% include '../components/form.html' with form_type=2 %}
+
+
+{% endblock %}

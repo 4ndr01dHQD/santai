@@ -1,7 +1,7 @@
 from django.urls import path
 
 from santai.views import main, bali, massages, thai, slim, neck, foot, stone, herbal_bags, oil, contacts, \
-    orders, policy
+    orders, policy, hawaii, santai
 
 urlpatterns = [
     path("", main),
@@ -14,6 +14,8 @@ urlpatterns = [
     path("massages/stone/", stone),
     path("massages/herbal_bags/", herbal_bags),
     path("massages/oil/", oil),
+    path("massages/hawaii/", hawaii),
+    path("massages/santai/", santai),
     path("contacts/", contacts),
     path("orders/", orders),
     path("policy/", policy),

@@ -21,6 +21,11 @@ def main(request):
             'img': 'flower',
         },
         {
+            'title': 'Гавайский массаж Ломи-Ломи',
+            'url': 'hawaii',
+            'img': 'hawaii',
+        },
+        {
             'title': 'Slim массаж',
             'url': 'slim',
             'img': 'massage',
@@ -34,6 +39,11 @@ def main(request):
             'title': 'Foot массаж',
             'url': 'foot',
             'img': 'foot',
+        },
+        {
+            'title': 'SANTAI массаж',
+            'url': 'santai',
+            'img': 'santai',
         },
     ]
     return render(request, 'main.html', context={'massages': massages})
@@ -83,6 +93,14 @@ def policy(request):
     return render(request, 'policy.html')
 
 
+def hawaii(request):
+    return render(request, 'massages/hawaii.html')
+
+
+def santai(request):
+    return render(request, 'massages/santai.html')
+
+
 def massages(request):
     massages = [
         {
@@ -124,6 +142,16 @@ def massages(request):
             'title': 'Арома-ойл массаж',
             'url': 'oil',
             'img': 'oil',
+        },
+        {
+            'title': 'Гавайский массаж Ломи-Ломи',
+            'url': 'hawaii',
+            'img': 'hawaii',
+        },
+        {
+            'title': 'SANTAI массаж',
+            'url': 'santai',
+            'img': 'santai',
         },
     ]
 
