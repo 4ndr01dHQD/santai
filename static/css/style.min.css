@@ -1343,6 +1343,9 @@ h1, h2, h3, h4, h5, h6, p, a {
     margin-top: 50px;
     gap: 60px;
   }
+  .special__link {
+    font-size: 18px;
+  }
 }
 @media (max-width: 850px) {
   .special__wrapper {
@@ -1360,6 +1363,10 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
   .special__link {
     margin-top: 20px;
+    font-size: 16px;
+  }
+  .special__link img {
+    margin-left: 5px;
   }
 }
 @media (max-width: 620px) {

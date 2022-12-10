@@ -18,6 +18,9 @@
       margin-top: 50px;
       gap: 60px;
     }
+    &__link {
+      font-size: 18px;
+    }
   }
 }
 
@@ -42,6 +45,10 @@
 
     &__link {
       margin-top: 20px;
+      font-size: 16px;
+      img{
+        margin-left: 5px;
+      }
     }
 
   }
