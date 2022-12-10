@@ -23,6 +23,9 @@
 @media (max-width: 578px) {
     .reviews {  
         margin-top: 20px;
-        
+        &__item {
+            width: 100%;
+
+        }
     }
 }
