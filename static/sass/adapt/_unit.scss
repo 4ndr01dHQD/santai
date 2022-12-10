@@ -47,6 +47,9 @@
 
 @media (max-width: 768px) {
     .unit {
+        &__title{
+            font-size: 32px;
+        }
         &__descr {
             margin-top: 10px;
             display: block;
@@ -89,6 +92,9 @@
 
 @media (max-width: 576px) {
     .unit {
+        &__title{
+            font-size: 28px;
+        }
         &__white{
             button{
                 padding: 20px;

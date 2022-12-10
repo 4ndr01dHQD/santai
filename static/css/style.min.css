@@ -1629,6 +1629,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 @media (max-width: 768px) {
+  .unit__title {
+    font-size: 32px;
+  }
   .unit__descr {
     margin-top: 10px;
     display: block;
@@ -1668,6 +1671,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 @media (max-width: 576px) {
+  .unit__title {
+    font-size: 28px;
+  }
   .unit__white button {
     padding: 20px;
   }
