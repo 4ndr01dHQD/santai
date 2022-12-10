@@ -20,13 +20,9 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 578px) {
     .reviews {  
-        justify-content: center;      
-        &__item {
-            width: 90%;
-
-        }
+        margin-top: 0;
         
     }
 }

@@ -1531,12 +1531,9 @@ h1, h2, h3, h4, h5, h6, p, a {
     width: 80%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 578px) {
   .reviews {
-    justify-content: center;
-  }
-  .reviews__item {
-    width: 90%;
+    margin-top: 0;
   }
 }
 @media (max-width: 1280px) {
