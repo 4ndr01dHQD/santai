@@ -45,18 +45,17 @@
         <h2 class="services__title">
             Услуги
         </h2>
-        <div class="services__wrapper">
-            {% for massage in massages %}
-            <a href="/massages/{{massage.url}}" class="services__item">
+    </div>
+    <div class="services__wrapper owl-carousel owl-theme">
+        {% for massage in massages %}
+        <a href="/massages/{{massage.url}}" class="services__item item">
+            <img class="services__item__img" src="/media/img/massages/{{massage.url}}.png" alt="">
+            <div class="services__item__descr">
                 <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
-                {{massage.title}}
-                <img src="/media/icons/arrow.svg" class="services__item__arrow" alt="">
-            </a>
-            {% endfor %}
-        </div>
-        <a href="/massages" class="button_yellow services__button button_to_bordered_yellow">
-            Полный список услуг
+                <p>{{massage.title}}</p>
+            </div>
         </a>
+        {% endfor %}
     </div>
 </section>
 <section class="about">
@@ -75,6 +74,46 @@
     </div>
 </section>
 
+<!--<section class="special">-->
+<!--    <div class="container">-->
+<!--        <div class="special__wrapper">-->
+<!--            <h2 class="special__title">-->
+<!--                Наши специальные предложения-->
+<!--            </h2>-->
+<!--            <a class="special__item" href="/massages/stone/">-->
+<!--                <img src="media/icons/special/stone_icon 1.png" alt="">-->
+<!--                <p class="special__item__title">-->
+<!--                    Стоун массаж-->
+<!--                </p>-->
+<!--                <p class="special__item__subtitle">-->
+<!--                    Диагностика и лечение заболеваний сердечно-сосудистой системы-->
+<!--                </p>-->
+<!--            </a>-->
+<!--            <a class="special__item" href="/massages/herbal_bags/">-->
+<!--                <img src="media/icons/special/herbal-massage 2.png" alt="">-->
+<!--                <p class="special__item__title">-->
+<!--                    Массаж травянными мешочками-->
+<!--                </p>-->
+<!--                <p class="special__item__subtitle">-->
+<!--                    Диагностика и лечение заболеваний сердечно-сосудистой системы-->
+<!--                </p>-->
+<!--            </a>-->
+<!--            <a class="special__item" href="/massages/oil/">-->
+<!--                <img src="media/icons/special/essential-oil 3.png" alt="">-->
+<!--                <p class="special__item__title">-->
+<!--                    Арома-ойл массаж-->
+<!--                </p>-->
+<!--                <p class="special__item__subtitle">-->
+<!--                    Диагностика и лечение заболеваний сердечно-сосудистой системы-->
+<!--                </p>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--        <a href="/massages/" class="special__link">-->
+<!--            Все услуги-->
+<!--            <img src="media/icons/arrow small.png" alt=">">-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</section>-->
 
 <section class="gallery">
     <div class="container">
@@ -83,52 +122,11 @@
         </h2>
     </div>
     <div class="owl-carousel owl-theme">
-        <div class="item" ><img src="/media/img/galleries/DSC08588.JPG" alt="massage"></div>
-        <div class="item" ><img src="/media/img/galleries/DSC08733.JPG" alt="massage"></div>
-        <div class="item" ><img src="/media/img/galleries/DSC08603.JPG" alt="massage"></div>
-        <div class="item" ><img src="/media/img/galleries/DSC08597.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08588.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08733.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08603.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08597.JPG" alt="massage"></div>
         <!--        <img src="/media/img/galleries/DSC08729.JPG" alt="massage">-->
-    </div>
-</section>
-
-<section class="special">
-    <div class="container">
-        <div class="special__wrapper">
-            <h2 class="special__title">
-                Наши специальные предложения
-            </h2>
-            <a class="special__item" href="/massages/stone/">
-                <img src="media/icons/special/stone_icon 1.png" alt="">
-                <p class="special__item__title">
-                    Стоун массаж
-                </p>
-                <p class="special__item__subtitle">
-                    Диагностика и лечение заболеваний сердечно-сосудистой системы
-                </p>
-            </a>
-            <a class="special__item" href="/massages/herbal_bags/">
-                <img src="media/icons/special/herbal-massage 2.png" alt="">
-                <p class="special__item__title">
-                    Массаж травянными мешочками
-                </p>
-                <p class="special__item__subtitle">
-                    Диагностика и лечение заболеваний сердечно-сосудистой системы
-                </p>
-            </a>
-            <a class="special__item" href="/massages/oil/">
-                <img src="media/icons/special/essential-oil 3.png" alt="">
-                <p class="special__item__title">
-                    Арома-ойл массаж
-                </p>
-                <p class="special__item__subtitle">
-                    Диагностика и лечение заболеваний сердечно-сосудистой системы
-                </p>
-            </a>
-        </div>
-        <a href="/massages/" class="special__link">
-            Все услуги
-            <img src="media/icons/arrow small.png" alt=">">
-        </a>
     </div>
 </section>
 
@@ -182,18 +180,41 @@
             responsive: {
                 0: {
                     items: 1,
-                    mergeFit:true
+                    mergeFit: true
                 },
                 678: {
                     items: 2,
-                    mergeFit:true
+                    mergeFit: true
                 },
                 1000: {
                     items: 3,
-                    mergeFit:true
+                    mergeFit: true
                 }
             }
         });
     });
+
+    $(document).ready(function () {
+        $(".services .owl-carousel").owlCarousel({
+            margin: 10,
+            loop: true,
+            stagePadding: 50,
+            responsive: {
+                0: {
+                    items: 1,
+                    mergeFit: true
+                },
+                678: {
+                    items: 2,
+                    mergeFit: true
+                },
+                1000: {
+                    items: 3,
+                    mergeFit: true
+                }
+            }
+        });
+    });
+
 </script>
 {% endblock %}

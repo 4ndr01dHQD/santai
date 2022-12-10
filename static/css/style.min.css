@@ -289,29 +289,40 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
+  margin-bottom: 20px;
   line-height: 1.1;
   color: #101010;
 }
 .services__item {
-  width: 100%;
-  margin-top: 20px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 49px;
-  color: #343434;
-  background: #FFFFFF;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
-  border-radius: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.1;
+  color: white;
   position: relative;
+}
+.services__item__img {
+  border-radius: 10px;
+}
+.services__item__descr {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
 }
 .services__item__icon {
   margin-right: 10px;
   height: 46px;
+  width: 46px !important;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%);
 }
 .services__item__arrow {
   position: absolute;
@@ -319,13 +330,14 @@ h1, h2, h3, h4, h5, h6, p, a {
   height: 26px;
 }
 .services__item:hover {
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  background: #d7b66f;
-  color: white;
+  color: #D7B66F;
 }
 .services__item:hover > img {
+  filter: saturate(90%) blur(1.5px);
+}
+.services__item:hover > div img {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%);
+  filter: invert(81%) sepia(51%) saturate(415%) hue-rotate(342deg) brightness(88%) contrast(89%) !important;
 }
 .services__button {
   width: -webkit-fit-content;
@@ -338,7 +350,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .about {
-  padding-top: 40px;
+  padding-top: 160px;
 }
 .about__wrapper {
   background: #FFFFFF;
@@ -699,6 +711,59 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .policy h4 {
   margin-bottom: 10px;
+}
+
+.massages_list__title {
+  font-family: "Philosopher";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.1;
+  color: #101010;
+}
+.massages_list__item {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 49px;
+  color: #343434;
+  background: #FFFFFF;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
+  border-radius: 15px;
+  position: relative;
+}
+.massages_list__item__icon {
+  margin-right: 10px;
+  height: 46px;
+}
+.massages_list__item__arrow {
+  position: absolute;
+  right: 20px;
+  height: 26px;
+}
+.massages_list__item:hover {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  background: #d7b66f;
+  color: white;
+}
+.massages_list__item:hover > img {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%);
+}
+.massages_list__button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+  margin-top: 20px;
 }
 
 .unit {

@@ -19,14 +19,14 @@
         {% include './components/messangers.html' %}
 
     </section>
-    <section class="services">
+    <section class="massages_list">
         <div class="container">
-            <div class="services__wrapper">
+            <div class="massages_list__wrapper">
                 {% for massage in massages %}
-                <a href="{{massage.url}}" class="services__item">
-                    <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
+                <a href="{{massage.url}}" class="massages_list__item">
+                    <img src="/media/icons/services/{{massage.img}}.png" class="massages_list__item__icon" alt="">
                     {{massage.title}}
-                    <img src="/media/icons/arrow.svg" class="services__item__arrow" alt="">
+                    <img src="/media/icons/arrow.svg" class="massages_list__item__arrow" alt="">
                 </a>
                 {% endfor %}
             </div>
