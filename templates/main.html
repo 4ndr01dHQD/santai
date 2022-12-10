@@ -74,6 +74,23 @@
         </div>
     </div>
 </section>
+
+
+<section class="gallery">
+    <div class="container">
+        <h2 class="gallery__title">
+            Галерея
+        </h2>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="/media/img/galleries/DSC08588.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08733.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08603.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08597.JPG" alt="massage"></div>
+        <!--        <img src="/media/img/galleries/DSC08729.JPG" alt="massage">-->
+    </div>
+</section>
+
 <section class="special">
     <div class="container">
         <div class="special__wrapper">
@@ -142,76 +159,7 @@
     </div>
 </section>
 
-<!--<section class="experts">-->
-<!--    <div class="container">-->
-<!--        <h2 class="experts__title">-->
-<!--            У нас работают-->
-<!--            лучшие специалисты-->
-<!--        </h2>-->
-<!--        <div class="experts__wrapper">-->
-<!--            <div class="experts__item">-->
-<!--                <div class="experts__item__image__wrapper">-->
-<!--                    <img src="media/img/expert.png" alt="" class="experts__item__image">-->
-
-<!--                </div>-->
-<!--                <div class="experts__item__text">-->
-<!--                    <p class="experts__item__title">-->
-<!--                        Иванова Татьяна Михайловна-->
-<!--                    </p>-->
-<!--                    <p class="experts__item__subtitle">-->
-<!--                        Специалист по тайскому массажу-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="experts__item">-->
-<!--                <div class="experts__item__image__wrapper">-->
-<!--                    <img src="media/img/expert.png" alt="" class="experts__item__image">-->
-
-<!--                </div>-->
-<!--                <div class="experts__item__text">-->
-<!--                    <p class="experts__item__title">-->
-<!--                        Иванова Татьяна Михайловна-->
-<!--                    </p>-->
-<!--                    <p class="experts__item__subtitle">-->
-<!--                        Специалист по тайскому массажу-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="experts__item">-->
-<!--                <div class="experts__item__image__wrapper">-->
-<!--                    <img src="media/img/expert.png" alt="" class="experts__item__image">-->
-
-<!--                </div>-->
-<!--                <div class="experts__item__text">-->
-<!--                    <p class="experts__item__title">-->
-<!--                        Иванова Татьяна Михайловна-->
-<!--                    </p>-->
-<!--                    <p class="experts__item__subtitle">-->
-<!--                        Специалист по тайскому массажу-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="experts__item">-->
-<!--                <div class="experts__item__image__wrapper">-->
-<!--                    <img src="media/img/expert.png" alt="" class="experts__item__image">-->
-
-<!--                </div>-->
-<!--                <div class="experts__item__text">-->
-<!--                    <p class="experts__item__title">-->
-<!--                        Иванова Татьяна Михайловна-->
-<!--                    </p>-->
-<!--                    <p class="experts__item__subtitle">-->
-<!--                        Специалист по тайскому массажу-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 <section class="reviews container">
-    <h2 class="reviews__title">
-        Наши отзывы
-    </h2>
     <div class="reviews__item">
         <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A8a2fd0e51edb348d83e7c5a2679403aaac816bb23adfd716ef9bb255fa89fbe6&amp;source=constructor"
@@ -225,5 +173,23 @@
             массажа Сантай — Яндекс.Карты</a>
     </div>
 </section>
-
+<script>
+    $(document).ready(function () {
+        $(".gallery .owl-carousel").owlCarousel({
+            margin: 10,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
 {% endblock %}

@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-weight: 400;
   font-size: 28px;
   line-height: 1.1;
-  color: black;
+  color: #101010;
 }
 .descr img {
   width: 100px;
@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-weight: 400;
   font-size: 40px;
   line-height: 1.1;
-  color: black;
+  color: #101010;
 }
 .services__item {
   width: 100%;
@@ -1052,6 +1052,22 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-weight: 500;
   -webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.27));
   margin-top: 30px;
+}
+
+.gallery {
+  margin: 20px 0;
+}
+.gallery__title {
+  font-family: "Philosopher";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.1;
+  color: #101010;
+  margin-bottom: 20px;
+}
+.gallery .owl-carousel .item img {
+  border-radius: 10px;
 }
 
 @media (max-width: 1280px) {
