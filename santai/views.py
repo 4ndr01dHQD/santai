@@ -114,6 +114,14 @@ def oil_four_hands(request):
     return render(request, 'massages/oil_four_hands.html')
 
 
+def shiatsu(request):
+    return render(request, 'massages/shiatsu.html')
+
+
+def bamboo(request):
+    return render(request, 'massages/bamboo.html')
+
+
 def massages(request):
     massages = [
         {
@@ -175,6 +183,16 @@ def massages(request):
             'title': 'Oil-массаж в 4 руки',
             'url': 'oil_four_hands',
             'img': 'oil',
+        },
+        {
+            'title': 'Шиатцу',
+            'url': 'shiatsu',
+            'img': 'shiatsu',
+        },
+        {
+            'title': 'Креольский Bamboo массаж',
+            'url': 'bamboo',
+            'img': 'bamboo',
         },
     ]
 

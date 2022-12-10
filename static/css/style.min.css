@@ -1533,7 +1533,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 @media (max-width: 578px) {
   .reviews {
-    margin-top: 20px;
+    margin: 20px 0;
   }
   .reviews__item {
     width: 100%;
