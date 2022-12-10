@@ -1593,6 +1593,11 @@ h1, h2, h3, h4, h5, h6, p, a {
     width: 320px;
   }
 }
+@media (max-width: 567px) {
+  .footer__links {
+    justify-content: space-evenly;
+  }
+}
 @media (max-width: 1280px) {
   .unit__half {
     width: 50%;
