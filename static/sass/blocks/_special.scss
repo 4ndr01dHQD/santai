@@ -19,6 +19,16 @@
     }
   }
 
+  &__link:hover{
+    color: #D7B66F;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  }
+  &__link:hover > img{
+    color: #D7B66F;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    filter:invert(81%) sepia(51%) saturate(415%) hue-rotate(342deg) brightness(88%) contrast(89%) !important;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
