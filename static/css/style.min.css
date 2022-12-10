@@ -1237,39 +1237,48 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 @media (max-width: 1280px) {
-  .services__item {
+  .massages_list__item {
     padding: 30px;
   }
-  .services__item__arrow {
+  .massages_list__item__arrow {
     right: 15px;
   }
 }
 @media (max-width: 768px) {
-  .services__title {
+  .massages_list__title {
     font-size: 34px;
   }
-  .services__item {
+  .massages_list__item {
     font-size: 20px;
     border-radius: 10px;
     padding: 20px;
     line-height: 1.1;
   }
-  .services__item__icon {
+  .massages_list__item__icon {
     width: 25px;
     height: 25px;
   }
-  .services__item__arrow {
+  .massages_list__item__arrow {
     height: 20px;
     right: 10px;
   }
-  .services__button {
+  .massages_list__button {
     width: 100%;
     padding: 20px;
   }
 }
 @media (max-width: 576px) {
-  .services__item {
+  .massages_list__item {
     font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .services__item {
+    font-size: 16px;
+  }
+  .services__item__descr img {
+    height: 32px;
+    width: 32px !important;
   }
 }
 @media (max-width: 920px) {

@@ -1,44 +1,13 @@
-@media (max-width: 1280px) {
-    .services {
-        &__item {
-            padding: 30px;
-            &__arrow {
-                right: 15px;
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .services {
-        &__title {
-            font-size: 34px;
-          }
-        &__item {
-            font-size: 20px;
-            border-radius: 10px;
-            padding: 20px;
-            line-height: 1.1;
-            &__icon {
-                width: 25px;
-                height: 25px;
-            }
-            &__arrow {
-                height: 20px;
-                right: 10px;
-            }
-        }
-        &__button {
-            width: 100%;
-            padding: 20px;
-        }
-    }
-}
-
 @media (max-width: 576px) {
     .services {
         &__item {
-            font-size: 14px;
+            font-size: 16px;
+            &__descr{
+                img{
+                    height: 32px;
+                    width: 32px !important;
+                }
+            }
         }
     }
 }
