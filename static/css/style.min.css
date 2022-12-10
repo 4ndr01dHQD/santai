@@ -350,7 +350,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .about {
-  padding-top: 160px;
+  margin-top: 160px;
 }
 .about__wrapper {
   background: #FFFFFF;
@@ -1283,17 +1283,22 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 @media (max-width: 920px) {
   .about {
-    padding-top: 20px;
+    margin-top: 90px;
   }
 }
 @media (max-width: 850px) {
-  .header__menu__link__about {
-    display: none;
-  }
   .about__wrapper {
     padding: 20px;
   }
+  .about__subtitle {
+    width: 100%;
+    margin-bottom: 300px;
+  }
   .about__image {
+    max-height: 320px;
+    right: unset;
+  }
+  .header__menu__link__about {
     display: none;
   }
 }
@@ -1309,11 +1314,11 @@ h1, h2, h3, h4, h5, h6, p, a {
   .about__title {
     font-size: 34px;
   }
+  .about__subtitle {
+    font-size: 14px;
+  }
   .about__wrapper {
     padding: 20px;
-  }
-  .about__image {
-    display: none;
   }
 }
 @media (max-width: 1600px) {
