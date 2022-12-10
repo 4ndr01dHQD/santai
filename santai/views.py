@@ -45,6 +45,11 @@ def main(request):
             'url': 'santai',
             'img': 'santai',
         },
+        {
+            'title': 'Свеча любви',
+            'url': 'love_candle',
+            'img': 'love_candle',
+        },
     ]
     return render(request, 'main.html', context={'massages': massages})
 
@@ -101,6 +106,14 @@ def santai(request):
     return render(request, 'massages/santai.html')
 
 
+def love_candle(request):
+    return render(request, 'massages/love_candle.html')
+
+
+def oil_four_hands(request):
+    return render(request, 'massages/oil_four_hands.html')
+
+
 def massages(request):
     massages = [
         {
@@ -152,6 +165,16 @@ def massages(request):
             'title': 'SANTAI массаж',
             'url': 'santai',
             'img': 'santai',
+        },
+        {
+            'title': 'Свеча любви',
+            'url': 'love_candle',
+            'img': 'love_candle',
+        },
+        {
+            'title': 'Oil-массаж в 4 руки',
+            'url': 'oil_four_hands',
+            'img': 'oil',
         },
     ]
 
