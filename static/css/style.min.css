@@ -1533,10 +1533,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 @media (max-width: 768px) {
   .reviews {
-    justify-content: start;
+    justify-content: center;
   }
   .reviews__item {
-    width: 100%;
+    width: 90%;
   }
 }
 @media (max-width: 1280px) {
