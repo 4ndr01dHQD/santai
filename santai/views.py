@@ -298,8 +298,8 @@ def create_certificate(request):
     # # todo Добавить сохранение куки, для того, что бы не долбить бэк
     # # todo Добавить рекапчу фоновую
     if order:
-        if (order.updated_at + timezone.timedelta(days=1)) > today:
-            return Response('Заявку можно отправлять не более раза в сутки.', status=status.HTTP_403_FORBIDDEN)
+        if (order.created_at + timezone.timedelta(days=1)) > today:
+            return Response('Вы ранее уже создавали заявку.', status=status.HTTP_403_FORBIDDEN)
     serializer.save()
 
     return Response('Заявка создана, ожидайте звонка', status=status.HTTP_201_CREATED)
