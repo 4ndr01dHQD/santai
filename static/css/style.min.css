@@ -621,7 +621,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   display: flex;
   width: 186px;
   justify-content: space-between;
-  margin: 20px auto 0;
+  margin: 20px 0;
 }
 .footer__link:hover > img {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -699,7 +699,6 @@ h1, h2, h3, h4, h5, h6, p, a {
   width: 100%;
 }
 .contacts__white__info {
-  padding-left: 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
