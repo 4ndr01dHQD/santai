@@ -15,11 +15,12 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 1.1;
-    color: white;
+    color: #D7B66F;
     position: relative;
 
     &__img{
       border-radius: 10px;
+      filter: saturate(90%) blur(1.5px);
     }
 
     &__descr{
@@ -40,7 +41,8 @@
       margin-right: 10px;
       height: 46px;
       width: 46px !important;
-      filter:invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%);
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+      filter: invert(81%) sepia(51%) saturate(415%) hue-rotate(342deg) brightness(88%) contrast(89%);
     }
 
     &__arrow {
@@ -50,16 +52,15 @@
     }
   }
   &__item:hover{
-    color: #D7B66F;
+    color: white;
   }
 
   &__item:hover > img{
-    filter: saturate(90%) blur(1.5px);
+    filter: unset;
   }
 
   &__item:hover > div img{
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-    filter:invert(81%) sepia(51%) saturate(415%) hue-rotate(342deg) brightness(88%) contrast(89%) !important;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%) !important;
   }
 
   &__button {
