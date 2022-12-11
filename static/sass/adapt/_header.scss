@@ -6,10 +6,13 @@
     }
 }
 
-@media (max-width: 1768px) {
+@media (max-width: 1280px) {
     .header {
-        &__menu {
+        &__menu{
            display: none;
+           &__link__phone {
+            display: none;
+           }
         }
     }
 }

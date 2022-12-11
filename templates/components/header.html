@@ -1,22 +1,39 @@
-    <header class="header">
-            <div class="header__logo_wrapper">
-                <a href="/">
-                    <img src="/media/img/logo.png" alt="logo" class="header__logo">
-                </a>
-            </div>
-            <div class="header__menu">
-                <a href="/massages/" class="header__menu__link header__menu__link_hamburger">
-                    Услуги
-                </a>
-                <a href="/certificate" class="header__menu__link header__menu__link__about">
-                    Сертификаты
-                </a>
-                <a href="/contacts" class="header__menu__link">
-                    Контакты
-                </a>
-            </div>
-            <a href="tel:#" class="header__menu__link header__menu__link__phone">
-                <img src="/media/icons/phone.png" alt="">
-                +7 (961) 174-77-47
-            </a>
-        </header>
+<header class="header">
+    <div class="header__logo_wrapper">
+        <a href="/">
+            <img src="/media/img/logo.png" alt="logo" class="header__logo">
+        </a>
+    </div>
+    <div class="header__menu">
+        <a href="/" class="header__menu__link header__menu__link_hamburger">
+            Главная
+        </a>
+        <a href="/massages/" class="header__menu__link header__menu__link_hamburger">
+            Услуги
+        </a>
+        <a href="/certificate" class="header__menu__link header__menu__link__certificate">
+            Сертификаты
+        </a>
+        <a href="/contacts" class="header__menu__link">
+            Контакты
+        </a>
+    </div>
+    <a href="tel:#" class="header__menu__link header__menu__link__phone">
+        <img src="/media/icons/phone.png" alt="">
+        +7 (961) 174-77-47
+    </a>
+    <a href="javascript:void(0);" class="header__menu__link_hamburger" onclick="open_menu_mobile()">
+        <img src="/media/icons/hamburger.png" alt="">
+    </a>
+</header>
+
+<script>
+    function open_menu_mobile(){
+        if($(".menu_mobile").is(":visible")){
+            $(".menu_mobile").hide()
+        }else{
+            $(".menu_mobile").css('display', 'flex')
+        }
+
+    }
+</script>

@@ -30,9 +30,14 @@
       }
 
       &_hamburger {
+        display: none;
         img {
-          margin-right: 10px;
+          height: 26px;
         }
+      }
+      &_hamburger:hover > img{
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        filter: invert(55%) sepia(75%) saturate(253%) hue-rotate(360deg) brightness(92%) contrast(83%);
       }
     }
 

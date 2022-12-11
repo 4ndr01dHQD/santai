@@ -172,8 +172,15 @@ h1, h2, h3, h4, h5, h6, p, a {
 .header__menu__link img {
   height: 25px;
 }
+.header__menu__link_hamburger {
+  display: none;
+}
 .header__menu__link_hamburger img {
-  margin-right: 10px;
+  height: 26px;
+}
+.header__menu__link_hamburger:hover > img {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  filter: invert(55%) sepia(75%) saturate(253%) hue-rotate(360deg) brightness(92%) contrast(83%);
 }
 .header__menu__link:hover {
   color: #D7B66F;
@@ -775,6 +782,55 @@ h1, h2, h3, h4, h5, h6, p, a {
   margin-top: 20px;
 }
 
+.menu_mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  z-index: 100;
+  background-color: #D7B66F;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.menu_mobile__link {
+  font-size: 24px;
+  color: white;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+}
+.menu_mobile__link_logo img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+.menu_mobile__link_cross {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+.menu_mobile__link_cross img {
+  height: 36px;
+}
+.menu_mobile__soc_links {
+  display: flex;
+  width: 186px;
+  justify-content: space-between;
+}
+.menu_mobile__soc_links img {
+  height: 44px;
+  filter: invert(100%) sepia(3%) saturate(7487%) hue-rotate(185deg) brightness(102%) contrast(102%);
+}
+.menu_mobile button {
+  width: 80%;
+  padding: 15px;
+  margin-top: 10px;
+}
+
 .unit {
   padding: 20px 0 0;
 }
@@ -1269,8 +1325,11 @@ h1, h2, h3, h4, h5, h6, p, a {
     max-width: 400px;
   }
 }
-@media (max-width: 1768px) {
+@media (max-width: 1280px) {
   .header__menu {
+    display: none;
+  }
+  .header__menu__link__phone {
     display: none;
   }
 }
@@ -1897,5 +1956,10 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
   .certificate__times__option label {
     font-size: 14px;
+  }
+}
+@media (max-width: 1280px) {
+  .header__menu__link_hamburger {
+    display: block;
   }
 }/*# sourceMappingURL=style.min.css.map */
