@@ -6,8 +6,8 @@
   left: 0;
   padding: 20px;
   width: 100%;
+  overflow: hidden;
   height: 100%;
-  max-height: 600px;
   z-index: 100;
   background-color: #D7B66F;
   align-items: center;
@@ -24,6 +24,7 @@
     &__link_logo {
       img{
         height: 60px;
+        margin-top: 65px;
         margin-bottom: 10px;
       }
     }
