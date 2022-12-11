@@ -15,14 +15,14 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 1.1;
-    color: #D7B66F;
+    color: white;
     position: relative;
 
     &__img{
       border-radius: 10px;
       filter: saturate(90%) blur(1.5px);
     }
-
+    
     &__descr{
       position: absolute;
       display: flex;
@@ -35,6 +35,13 @@
       padding: 10px;
       width: 100%;
       height: 100%;
+      &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        font-family: "Montserrat";
+      }
     }
 
     &__icon {
@@ -42,7 +49,7 @@
       height: 46px;
       width: 46px !important;
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-      filter: invert(81%) sepia(51%) saturate(415%) hue-rotate(342deg) brightness(88%) contrast(89%);
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%);
     }
 
     &__arrow {
@@ -52,7 +59,7 @@
     }
   }
   &__item:hover{
-    color: white;
+    color: #D7B66F;
   }
 
   &__item:hover > img{
@@ -60,7 +67,8 @@
   }
 
   &__item:hover > div img{
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%) !important;
+    filter: invert(81%) sepia(51%) saturate(415%) hue-rotate(342deg) brightness(88%) contrast(89%) !important;
+    
   }
 
   &__button {

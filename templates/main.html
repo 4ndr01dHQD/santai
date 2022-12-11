@@ -49,9 +49,15 @@
     <div class="services__wrapper owl-carousel owl-theme">
         {% for massage in massages %}
         <a href="/massages/{{massage.url}}" class="services__item item">
+
             <img class="services__item__img" src="/media/img/massages/{{massage.url}}.png" alt="">
+
             <div class="services__item__descr">
-                <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
+                <div class="services__item__descr__top" >
+                    <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
+                    <p>от {{massage.price}} ₽</p>
+                </div>
+
                 <p>{{massage.title}}</p>
             </div>
         </a>

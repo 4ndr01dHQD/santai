@@ -154,41 +154,49 @@ def main(request):
             'title': 'Тайский массаж',
             'url': 'thai',
             'img': 'buddha',
+            'price': '2400'
         },
         {
             'title': 'Балийский массаж',
             'url': 'bali',
             'img': 'flower',
+            'price': '3200'
         },
         {
             'title': 'Гавайский массаж Ломи-Ломи',
             'url': 'hawaii',
             'img': 'hawaii',
+            'price': '3200'
         },
         {
             'title': 'Slim массаж',
             'url': 'slim',
             'img': 'massage',
+            'price': '3400'
         },
         {
             'title': 'Массаж шейно-воротниковой зоны + спина',
             'url': 'neck',
             'img': 'facial-treatment',
+            'price': '1400'
         },
         {
             'title': 'Foot массаж',
             'url': 'foot',
             'img': 'foot',
+            'price': '1400'
         },
         {
             'title': 'SANTAI массаж',
             'url': 'santai',
             'img': 'santai',
+            'price': '3400'
         },
         {
             'title': 'Свеча любви',
             'url': 'love_candle',
             'img': 'love_candle',
+            'price': '3200'
         },
     ]
     return render(request, 'main.html', context={'massages': massages})
