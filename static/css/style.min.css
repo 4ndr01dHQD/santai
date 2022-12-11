@@ -1883,6 +1883,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 @media (max-width: 576px) {
+  .certificate__title {
+    font-size: 32px;
+  }
   .certificate__times__option {
     margin-right: 10px;
   }

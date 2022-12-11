@@ -15,11 +15,16 @@
     }
 
     @media (max-width: 576px) {
-        
-        .certificate__times__option {
-            margin-right: 10px;
-            label{
-                font-size: 18px;
+        .certificate {
+            &__title{
+                font-size: 32px;
+            }
+            &__times__option {
+                margin-right: 10px;
+                label{
+                    font-size: 18px;
+                }
             }
         }
     }
+    
