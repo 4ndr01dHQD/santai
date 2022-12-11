@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   line-height: 1.1;
   background: #D7B66F;
   color: #FFFFFF;
-  padding: 25px 75px;
+  padding: 25px 25px;
   border-width: 2px;
   border-style: solid;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   line-height: 1.1;
   background: transparent;
   color: #FFFFFF;
-  padding: 25px 75px;
+  padding: 25px 25px;
   border-width: 2px;
   border-style: solid;
   width: 100%;
@@ -113,14 +113,14 @@ h1, h2, h3, h4, h5, h6, p, a {
   .button_yellow, .button_white {
     font-size: 22px;
     border-radius: 10px;
-    padding: 10px 35px;
+    padding: 10px 25px;
     height: auto;
   }
 }
 @media (max-width: 768px) {
   .button_yellow, .button_white {
-    font-size: 18px;
-    padding: 10px 25px;
+    font-size: 16px;
+    padding: 10px 15px;
     height: auto;
   }
 }
@@ -1340,6 +1340,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   .main__subtitle {
     margin-top: 50px;
   }
+  .main__aside {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .main {
@@ -1347,9 +1350,6 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
   .main_header {
     height: 90px;
-  }
-  .main__aside {
-    display: none;
   }
   .main__title {
     font-size: 100px;

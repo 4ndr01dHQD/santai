@@ -39,7 +39,7 @@ $yellow: #D7B66F;
     line-height: 1.1;
     background: #D7B66F;
     color: #FFFFFF;
-    padding: 25px 75px;
+    padding: 25px 25px;
     border-width: 2px;
     border-style: solid;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -76,7 +76,7 @@ $yellow: #D7B66F;
     line-height: 1.1;
     background: transparent;
     color: #FFFFFF;
-    padding: 25px 75px;
+    padding: 25px 25px;
     border-width: 2px;
     border-style: solid;
     width: 100%;
@@ -125,7 +125,7 @@ $yellow: #D7B66F;
   .button_yellow, .button_white {
     font-size: 22px;
     border-radius: 10px;
-    padding: 10px 35px;
+    padding: 10px 25px;
     height: auto;
   }
 }
@@ -133,8 +133,8 @@ $yellow: #D7B66F;
 @media (max-width: 768px) {
 
   .button_yellow, .button_white {
-    font-size: 18px;
-    padding: 10px 25px;
+    font-size: 16px;
+    padding: 10px 15px;
     height: auto;
   }
 }
