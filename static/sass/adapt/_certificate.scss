@@ -1,6 +1,11 @@
 @media (max-width: 768px) {
 
     .certificate {
+        &__massages{
+            &__item{
+                font-size: 16px;
+            }
+        }
         &__fields {
             &__wrapper{
                 flex-direction: column;
@@ -16,6 +21,11 @@
 
     @media (max-width: 576px) {
         .certificate {
+            &__massages{
+                &__item{
+                    font-size: 14px;
+                }
+            }
             &__title{
                 font-size: 32px;
             }

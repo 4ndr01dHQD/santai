@@ -1875,6 +1875,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 @media (max-width: 768px) {
+  .certificate__massages__item {
+    font-size: 16px;
+  }
   .certificate__fields__wrapper {
     flex-direction: column;
   }
@@ -1883,6 +1886,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
 }
 @media (max-width: 576px) {
+  .certificate__massages__item {
+    font-size: 14px;
+  }
   .certificate__title {
     font-size: 32px;
   }
