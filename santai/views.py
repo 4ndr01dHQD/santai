@@ -4,8 +4,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from santai.models import Order
-from santai.serializers import OrderSerializer
+from santai.models import Order, CertificateOrder
+from santai.serializers import OrderSerializer, CertificateOrderSerializer
 
 MASSAGES = [
     {
@@ -288,20 +288,18 @@ def orders(request):
         serializer.save()
     return Response('Ваш запрос успешно передан, ожидайте звонка', status=status.HTTP_201_CREATED)
 
+
 @api_view(['POST'])
 def create_certificate(request):
-    # serializer = OrderSerializer(data=request.data)
-    # serializer.is_valid(raise_exception=True)
-    # order = Order.objects.filter(phone=serializer.validated_data['phone']).first()
-    # today = timezone.now()
+    serializer = CertificateOrderSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    order = CertificateOrder.objects.filter(phone=serializer.validated_data['phone']).first()
+    today = timezone.now()
     # # todo Добавить сохранение куки, для того, что бы не долбить бэк
     # # todo Добавить рекапчу фоновую
-    # if order:
-    #     if (order.updated_at + timezone.timedelta(days=1)) > today:
-    #         return Response('Заявку можно отправлять не более раза в сутки.', status=status.HTTP_403_FORBIDDEN)
-    #     order.is_permitted = False
-    #     order.name = serializer.validated_data['name']
-    #     order.save()
-    # else:
-    #     serializer.save()
+    if order:
+        if (order.updated_at + timezone.timedelta(days=1)) > today:
+            return Response('Заявку можно отправлять не более раза в сутки.', status=status.HTTP_403_FORBIDDEN)
+    serializer.save()
+
     return Response('Заявка создана, ожидайте звонка', status=status.HTTP_201_CREATED)

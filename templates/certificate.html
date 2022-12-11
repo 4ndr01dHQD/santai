@@ -28,12 +28,12 @@
             </div>
             <div class="certificate__times__wrapper">
                 <div class="certificate__times__option">
-                    <input type="radio" checked value="2400" name="price" id="60_minutes">
+                    <input type="radio" checked value="2400" name="time" id="60_minutes">
                     <label for="60_minutes" >60 минут</label>
 
                 </div>
                 <div class="certificate__times__option">
-                    <input type="radio" value="3400" name="price" id="90_minutes">
+                    <input type="radio" value="3400" name="time" id="90_minutes">
                     <label for="90_minutes" >90 минут</label>
                 </div>
             </div>
@@ -58,16 +58,6 @@
 
     </div>
 </section>
-
-<!--{% for massage in massages %}-->
-<!--                <option for="{{massage.url}}" class="certificate__massages__item">-->
-<!--                    <img src="/media/icons/services/{{massage.img}}.png" class="massages_list__item__icon" alt="">-->
-<!--                    <p>-->
-<!--                        {{massage.title}}-->
-<!--                    </p>-->
-<!--                    <input type="radio" value="{{massage.url}}" name="massage" id="{{massage.url}}">-->
-<!--                </option>-->
-<!--                {% endfor %}-->
 
 <script>
     $(document).ready(function () {
@@ -111,13 +101,13 @@
           const data = e.params.data;
           let set_selected = false
             $(".certificate__times__wrapper").html('')
-          for(price in data.prices){
+          for(time in data.prices){
               $(".certificate__times__wrapper").append('<div class="certificate__times__option">\n' +
-              `                    <input type="radio" ${!set_selected ? 'checked' : ''} value="${data.prices[price]}" name="price" id="${price}_minutes">` +
-              `<label for="${price}_minutes" >${price} минут</label>` +
+              `                    <input type="radio" ${!set_selected ? 'checked' : ''} value="${time}" name="time" id="${time}_minutes">` +
+              `<label for="${time}_minutes" >${time} минут</label>` +
               '                </div>')
               if(!set_selected){
-                  $('.certificate__sum__text').text(`${data.prices[price]} Руб`)
+                  $('.certificate__sum__text').text(`${data.prices[time]} Руб`)
               }
               set_selected = true
           }
