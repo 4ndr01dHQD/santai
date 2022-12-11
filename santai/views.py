@@ -7,6 +7,146 @@ from rest_framework.response import Response
 from santai.models import Order
 from santai.serializers import OrderSerializer
 
+MASSAGES = [
+    {
+        'title': 'Тайский массаж',
+        'url': 'thai',
+        'img': 'buddha',
+        'prices': {
+            '60': '2400',
+            '90': '3400',
+            '120': '4400',
+        }
+    },
+    {
+        'title': 'Балийский массаж',
+        'url': 'bali',
+        'img': 'flower',
+        'prices': {
+            '60': '3200',
+            '90': '4200',
+            '120': '5200',
+        }
+    },
+    {
+        'title': 'Slim массаж',
+        'url': 'slim',
+        'img': 'massage',
+        'prices': {
+            '60': '3400',
+            '90': '4400',
+        }
+    },
+    {
+        'title': 'Массаж шейно-воротниковой зоны + спина',
+        'url': 'neck',
+        'img': 'facial-treatment',
+        'prices': {
+            '60': '1400',
+            '90': '2400',
+        }
+    },
+    {
+        'title': 'Foot массаж',
+        'url': 'foot',
+        'img': 'foot',
+        'prices': {
+            '60': '1400',
+            '90': '2400',
+        }
+    },
+    {
+        'title': 'Стоун массаж',
+        'url': 'stone',
+        'img': 'stone',
+        'prices': {
+            '60': '3200',
+            '90': '4200',
+            '120': '5200',
+        }
+    },
+    {
+        'title': 'Массаж травянными мешочками',
+        'url': 'herbal_bags',
+        'img': 'herbal_bags',
+        'prices': {
+            '60': '3200',
+            '90': '4200',
+            '120': '5200',
+        }
+    },
+    {
+        'title': 'Арома-ойл массаж',
+        'url': 'oil',
+        'img': 'oil',
+        'prices': {
+            '60': '4700',
+            '90': '5700',
+            '120': '6700',
+        }
+    },
+    {
+        'title': 'Гавайский массаж Ломи-Ломи',
+        'url': 'hawaii',
+        'img': 'hawaii',
+        'prices': {
+            '60': '3200',
+            '90': '4200',
+            '120': '5200',
+        }
+    },
+    {
+        'title': 'SANTAI массаж',
+        'url': 'santai',
+        'img': 'santai',
+        'prices': {
+            '60': '3400',
+            '90': '4400',
+            '120': '5400',
+        }
+    },
+    {
+        'title': 'Свеча любви',
+        'url': 'love_candle',
+        'img': 'love_candle',
+        'prices': {
+            '60': '3200',
+            '90': '4200',
+            '120': '5200',
+        }
+    },
+    {
+        'title': 'Oil-массаж в 4 руки',
+        'url': 'oil_four_hands',
+        'img': 'oil',
+        'prices': {
+            '60': '4700',
+            '90': '5700',
+            '120': '6700',
+        }
+    },
+    {
+        'title': 'Шиатцу',
+        'url': 'shiatsu',
+        'img': 'shiatsu',
+        'prices': {
+            '60': '3200',
+            '90': '4200',
+            '120': '5200',
+        }
+    },
+    {
+        'title': 'Креольский Bamboo массаж',
+        'url': 'bamboo',
+        'img': 'bamboo',
+        'prices': {
+            '60': '3200',
+            '90': '4200',
+            '120': '5200',
+        }
+    },
+]
+
 
 def main(request):
     massages = [
@@ -122,81 +262,12 @@ def bamboo(request):
     return render(request, 'massages/bamboo.html')
 
 
-def massages(request):
-    massages = [
-        {
-            'title': 'Тайский массаж',
-            'url': 'thai',
-            'img': 'buddha',
-        },
-        {
-            'title': 'Балийский массаж',
-            'url': 'bali',
-            'img': 'flower',
-        },
-        {
-            'title': 'Slim массаж',
-            'url': 'slim',
-            'img': 'massage',
-        },
-        {
-            'title': 'Массаж шейно-воротниковой зоны + спина',
-            'url': 'neck',
-            'img': 'facial-treatment',
-        },
-        {
-            'title': 'Foot массаж',
-            'url': 'foot',
-            'img': 'foot',
-        },
-        {
-            'title': 'Стоун массаж',
-            'url': 'stone',
-            'img': 'stone',
-        },
-        {
-            'title': 'Массаж травянными мешочками',
-            'url': 'herbal_bags',
-            'img': 'herbal_bags',
-        },
-        {
-            'title': 'Арома-ойл массаж',
-            'url': 'oil',
-            'img': 'oil',
-        },
-        {
-            'title': 'Гавайский массаж Ломи-Ломи',
-            'url': 'hawaii',
-            'img': 'hawaii',
-        },
-        {
-            'title': 'SANTAI массаж',
-            'url': 'santai',
-            'img': 'santai',
-        },
-        {
-            'title': 'Свеча любви',
-            'url': 'love_candle',
-            'img': 'love_candle',
-        },
-        {
-            'title': 'Oil-массаж в 4 руки',
-            'url': 'oil_four_hands',
-            'img': 'oil',
-        },
-        {
-            'title': 'Шиатцу',
-            'url': 'shiatsu',
-            'img': 'shiatsu',
-        },
-        {
-            'title': 'Креольский Bamboo массаж',
-            'url': 'bamboo',
-            'img': 'bamboo',
-        },
-    ]
+def certificate(request):
+    return render(request, 'certificate.html', context={'massages': MASSAGES})
 
-    return render(request, 'massages.html', context={'massages': massages})
+
+def massages(request):
+    return render(request, 'massages.html', context={'massages': MASSAGES})
 
 
 @api_view(['POST'])
@@ -215,4 +286,22 @@ def orders(request):
         order.save()
     else:
         serializer.save()
+    return Response('Ваш запрос успешно передан, ожидайте звонка', status=status.HTTP_201_CREATED)
+
+@api_view(['POST'])
+def create_certificate(request):
+    # serializer = OrderSerializer(data=request.data)
+    # serializer.is_valid(raise_exception=True)
+    # order = Order.objects.filter(phone=serializer.validated_data['phone']).first()
+    # today = timezone.now()
+    # # todo Добавить сохранение куки, для того, что бы не долбить бэк
+    # # todo Добавить рекапчу фоновую
+    # if order:
+    #     if (order.updated_at + timezone.timedelta(days=1)) > today:
+    #         return Response('Заявку можно отправлять не более раза в сутки.', status=status.HTTP_403_FORBIDDEN)
+    #     order.is_permitted = False
+    #     order.name = serializer.validated_data['name']
+    #     order.save()
+    # else:
+    #     serializer.save()
     return Response('Ваш запрос успешно передан, ожидайте звонка', status=status.HTTP_201_CREATED)

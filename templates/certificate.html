@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="main main_header">
+    {% include './components/header.html' %}
+
+</section>
+
+<section class="certificate">
+    <div class="container">
+
+
+        <div class="certificate__white">
+            <h2 class="certificate__title">
+                Заказать сертификат
+            </h2>
+            <p class="certificate__subtitle">
+                Выберите тип сертификата
+            </p>
+            <form action="javascript:void(null)">
+                {% csrf_token %}
+                <div class="certificate__massages__wrapper">
+                <select class="certificate__massages">
+
+                </select>
+            </div>
+            <div class="certificate__times__wrapper">
+                <div class="certificate__times__option">
+                    <input type="radio" checked value="2400" name="price" id="60_minutes">
+                    <label for="60_minutes" >60 минут</label>
+
+                </div>
+                <div class="certificate__times__option">
+                    <input type="radio" value="3400" name="price" id="90_minutes">
+                    <label for="90_minutes" >90 минут</label>
+                </div>
+            </div>
+             <div class="certificate__fields__wrapper">
+                 <input type="text" name='name' required placeholder="Имя" class="certificate__input">
+            <input type="text" name='phone' required placeholder="Телефон" class="certificate__input">
+             </div>
+            <div  class="certificate__sum">
+                <p>Итого</p>
+                <p class="certificate__sum__text" >2400 Руб</p>
+            </div>
+            <p class="certificate__policy">
+                <span>Нажимая на кнопку, Вы соглашаетесь с</span> <a href="/policy/">Политикой конфиденциальности</a>
+            </p>
+            <button type="submit" class="button_yellow certificate__button button_to_bordered_yellow">
+                Записаться
+            </button>
+            </form>
+
+
+        </div>
+
+    </div>
+</section>
+
+<!--{% for massage in massages %}-->
+<!--                <option for="{{massage.url}}" class="certificate__massages__item">-->
+<!--                    <img src="/media/icons/services/{{massage.img}}.png" class="massages_list__item__icon" alt="">-->
+<!--                    <p>-->
+<!--                        {{massage.title}}-->
+<!--                    </p>-->
+<!--                    <input type="radio" value="{{massage.url}}" name="massage" id="{{massage.url}}">-->
+<!--                </option>-->
+<!--                {% endfor %}-->
+
+<script>
+    $(document).ready(function () {
+        let phoneMask = IMask(
+        document.querySelector('.certificate__fields__wrapper .certificate__input[name="phone"]'), {
+            mask: '+{7}(000)000-00-00'
+        });
+        var massages = [
+            {% for massage in massages %}
+                {
+                        id:{{ forloop.counter }},
+                        html: '<div  class="certificate__massages__item">\n' +
+                            '                    <img src="/media/icons/services/{{massage.img}}.png" class="massages_list__item__icon" alt="">\n' +
+                            '                    <p>{{massage.title}}</p>' +
+                            '                </div>',
+                        text: '<div  class="certificate__massages__item">\n' +
+                            '                    <img src="/media/icons/services/{{massage.img}}.png" class="massages_list__item__icon" alt="">\n' +
+                            '                    <p>{{massage.title}}</p>' +
+                            '                </div>',
+                        title: '{{massage.title}}',
+                        prices: {{massage.prices|safe}},
+                    },
+            {% endfor %}
+        ]
+
+        $('.certificate__massages').select2({
+            data: massages,
+            width: "100%",
+            escapeMarkup: function (markup) {
+                return markup;
+            },
+            templateResult: function (data) {
+                return data.html;
+            },
+            templateSelection: function (data) {
+                return data.text;
+            }
+        });
+
+        $('.certificate__massages').on('select2:select', function (e) {
+          const data = e.params.data;
+          let set_selected = false
+            $(".certificate__times__wrapper").html('')
+          for(price in data.prices){
+              $(".certificate__times__wrapper").append('<div class="certificate__times__option">\n' +
+              `                    <input type="radio" ${!set_selected ? 'checked' : ''} value="${data.prices[price]}" name="price" id="${price}_minutes">` +
+              `<label for="${price}_minutes" >${price} минут</label>` +
+              '                </div>')
+              if(!set_selected){
+                  $('.certificate__sum__text').text(`${data.prices[price]} Руб`)
+              }
+              set_selected = true
+          }
+        });
+
+         $(document).on("click",'.certificate__times__wrapper div input[type="radio"]', function(event){
+             $('.certificate__sum__text').text(`${event.target.value} Руб`)
+          });
+
+         $(".certificate form").on('submit', async function (event){
+             event.preventDefault()
+            const formData = new FormData(event.target);
+             formData.append('massage', $('.certificate__massages').select2('data')[0]['title'])
+             await fetch('/create_certificate/', {
+                method: 'POST',
+                body: formData
+            }).then((response) => {
+                return response.json().then(data => ({status: response.status, body: data}))
+            }).then(data => {
+                if (data.status >= 300) {
+                    $.notify(data.body, "error");
+                    console.log(data.body)
+                } else {
+                    $.notify(data.body, "success");
+                }
+
+            }).catch(err => {
+                $.notify("Ошибка со стороны сервера, обратитесь позже.", "error");
+            });
+
+         })
+
+    });
+</script>
+{% endblock %}

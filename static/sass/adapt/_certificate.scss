@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+
+    .certificate {
+        &__fields {
+            &__wrapper{
+                flex-direction: column;
+                input{
+                    width: 100%;
+                }
+            }
+    
+            
+        }
+    }
+    }
+
+    @media (max-width: 576px) {
+        
+        .certificate__times__option {
+            margin-right: 10px;
+            label{
+                font-size: 18px;
+            }
+        }
+    }

@@ -1,0 +1,12 @@
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #D7B66F;
+    color: white
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable img {
+    filter: invert(152%) sepia(11%) saturate(15%) hue-rotate(342deg) brightness(150%) contrast(109%) !important;
+}
+.select2-container .select2-selection--single {
+     height: unset;
+    padding: 5px;
+}
