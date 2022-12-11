@@ -1893,9 +1893,9 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-size: 32px;
   }
   .certificate__times__option {
-    margin-right: 10px;
+    margin-right: 5px;
   }
   .certificate__times__option label {
-    font-size: 18px;
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.min.css.map */
