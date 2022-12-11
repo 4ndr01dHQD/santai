@@ -65,7 +65,7 @@
         document.querySelector('.certificate__fields__wrapper .certificate__input[name="phone"]'), {
             mask: '+{7}(000)000-00-00'
         });
-        var massages = [
+        const massages = [
             {% for massage in massages %}
                 {
                         id:{{ forloop.counter }},
@@ -96,7 +96,6 @@
                 return data.text;
             }
         });
-
         $('.certificate__massages').on('select2:select', function (e) {
           const data = e.params.data;
           let set_selected = false
@@ -114,7 +113,8 @@
         });
 
          $(document).on("click",'.certificate__times__wrapper div input[type="radio"]', function(event){
-             $('.certificate__sum__text').text(`${event.target.value} Руб`)
+             const sum = $('.certificate__massages').select2('data')[0]['prices'][event.target.value]
+             $('.certificate__sum__text').text(`${sum} Руб`)
           });
 
          $(".certificate form").on('submit', async function (event){
