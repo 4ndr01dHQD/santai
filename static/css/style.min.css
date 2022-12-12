@@ -829,7 +829,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   justify-content: space-between;
 }
 .menu_mobile__soc_links img {
-  height: 44px;
+  height: 34px;
   filter: invert(100%) sepia(3%) saturate(7487%) hue-rotate(185deg) brightness(102%) contrast(102%);
 }
 .menu_mobile button {
