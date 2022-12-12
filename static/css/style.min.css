@@ -1341,6 +1341,57 @@ h1, h2, h3, h4, h5, h6, p, a {
   margin-top: 30px;
 }
 
+.promotions {
+  margin-top: 20px;
+}
+.promotions__title {
+  font-family: "Philosopher";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: #101010;
+}
+.promotions__list__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.promotions__item {
+  background-color: white;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.promotions__item img {
+  max-height: 280px;
+  border-radius: 10px 10px 0 0;
+}
+.promotions__item__descr {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.promotions__item__bottom {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 20px;
+  color: #101010;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.promotions__item__bottom button {
+  padding: 15px;
+  max-height: 60px;
+  width: 80%;
+  border-radius: 10px;
+}
+
 @media (max-width: 1280px) {
   .header__menu {
     max-width: 400px;
@@ -1986,6 +2037,25 @@ h1, h2, h3, h4, h5, h6, p, a {
 @media (max-width: 1280px) {
   .header__menu__link_hamburger {
     display: block;
+  }
+}
+@media (max-width: 992px) {
+  .promotions__item__bottom {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .promotions__list__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .promotions__item {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  .promotions__item {
+    width: 100%;
   }
 }
 .owl-theme .owl-controls .owl-page {

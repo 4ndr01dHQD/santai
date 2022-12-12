@@ -1,0 +1,51 @@
+.promotions {
+    margin-top: 20px;
+    &__title{
+        font-family: 'Philosopher';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        margin-bottom: 20px;
+        line-height: 1.1;
+        color: #101010;
+    }
+    &__list__wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item{
+        background-color: white;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        img{
+            max-height: 280px;
+            border-radius: 10px 10px 0 0;
+        }
+        &__descr{
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        &__bottom{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 20px;
+            color: #101010;   
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            button{
+                padding: 15px;
+                max-height: 60px;
+                width: 80%;
+                border-radius: 10px;
+            }
+        }
+    }
+
+}

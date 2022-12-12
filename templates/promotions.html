@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="main main_header">
+    {% include './components/header.html' %}
+
+</section>
+
+<section class="promotions">
+    <div class="container">
+        <h2 class="promotions__title">
+            Акции
+        </h2>
+        <div class="promotions__list__wrapper">
+            <div class="promotions__item">
+            <img src="/media/img/galleries/photo_5240172727950756321_y.jpg" alt="massage">
+            <div class="promotions__item__bottom">
+                <div class="promotions__item__descr">
+                    -30% на первый гостевой визит
+                </div>
+                <button class="button_yellow open__modal button_to_bordered_yellow">
+                    Записаться
+                </button>
+            </div>
+        </div>
+             <div class="promotions__item">
+            <img src="/media/img/promotions/oil_four_hands.png" alt="massage">
+            <div class="promotions__item__bottom">
+                <div class="promotions__item__descr">
+                    До конца декабря -50% на тайский ойл-массаж 1600 вместо 3200
+                </div>
+                <button class="button_yellow open__modal button_to_bordered_yellow">
+                    Записаться
+                </button>
+            </div>
+        </div>
+        <div class="promotions__item">
+            <img src="/media/img/galleries/DSC08597.JPG" alt="massage">
+            <div class="promotions__item__bottom">
+                <div class="promotions__item__descr">
+                    Скидка 50% на первую покупку абонемента
+                </div>
+                <button class="button_yellow open__modal button_to_bordered_yellow">
+                    Записаться
+                </button>
+            </div>
+        </div>
+        <div class="promotions__item">
+            <img src="/media/img/galleries/photo_5240172727950756320_y.jpg" alt="massage">
+            <div class="promotions__item__bottom">
+                <div class="promotions__item__descr">
+                    Новогодняя акция при покупке 2-х сертификатов третий в подарок
+                </div>
+                <button class="button_yellow open__modal button_to_bordered_yellow">
+                    Записаться
+                </button>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    {% include './components/modal.html' %}
+
+</section>
+
+{% endblock %}

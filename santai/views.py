@@ -278,6 +278,10 @@ def massages(request):
     return render(request, 'massages.html', context={'massages': MASSAGES})
 
 
+def promotions(request):
+    return render(request, 'promotions.html')
+
+
 @api_view(['POST'])
 def orders(request):
     serializer = OrderSerializer(data=request.data)

@@ -1,7 +1,8 @@
 from django.urls import path
 
 from santai.views import main, bali, massages, thai, slim, neck, foot, stone, herbal_bags, oil, contacts, \
-    orders, policy, hawaii, santai, love_candle, oil_four_hands, shiatsu, bamboo, certificate, create_certificate
+    orders, policy, hawaii, santai, love_candle, oil_four_hands, shiatsu, bamboo, certificate, create_certificate, \
+    promotions
 
 urlpatterns = [
     path("", main),
@@ -25,4 +26,5 @@ urlpatterns = [
     path("policy/", policy),
     path("certificate/", certificate),
     path("create_certificate/", create_certificate),
+    path("promotions/", promotions),
 ]

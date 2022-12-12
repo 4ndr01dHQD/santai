@@ -180,6 +180,7 @@ $yellow: #D7B66F;
 @import './blocks/modal';
 @import './blocks/gallery';
 @import './blocks/certificate';
+@import './blocks/promotions';
 
 @import './adapt/header';
 @import './adapt/main';
@@ -199,6 +200,7 @@ $yellow: #D7B66F;
 @import './adapt/contacts';
 @import './adapt/certificate';
 @import './adapt/mobile_menu';
+@import './adapt/promotions';
 
 .owl-theme .owl-controls .owl-page {
   display: inline-block;
