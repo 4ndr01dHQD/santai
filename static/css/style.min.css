@@ -924,6 +924,9 @@ h1, h2, h3, h4, h5, h6, p, a {
 .unit__descr__half {
   width: 50%;
 }
+.unit__descr__half .owl-carousel {
+  max-width: 340px;
+}
 .unit__descr__half_right {
   max-width: 500px;
   display: flex;
@@ -971,7 +974,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .unit__descr__card {
   background: #FFFFFF;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
   border-radius: 15px;
   max-width: 340px;
   margin-top: 10px;
@@ -1985,4 +1987,17 @@ h1, h2, h3, h4, h5, h6, p, a {
   .header__menu__link_hamburger {
     display: block;
   }
+}
+.owl-theme .owl-controls .owl-page {
+  display: inline-block;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  background: none repeat scroll 0 0 #869791;
+  border-radius: 20px;
+  display: block;
+  height: 12px;
+  margin: 5px 7px;
+  opacity: 0.5;
+  width: 12px;
 }/*# sourceMappingURL=style.min.css.map */
