@@ -36,6 +36,9 @@
         font-size: 14px;
         width: 100%;
         font-family: 'Montserrat';
+        a{
+            display: unset;
+        }
     }
     &__cross {
         cursor: pointer;

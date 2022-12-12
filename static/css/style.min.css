@@ -1045,6 +1045,15 @@ h1, h2, h3, h4, h5, h6, p, a {
 .form button {
   padding: 20px;
 }
+.form__policy {
+  font-size: 14px;
+  width: 100%;
+  font-family: "Montserrat";
+  margin-bottom: 20px;
+}
+.form__policy a {
+  display: unset;
+}
 .form__wrapper {
   padding: 20px;
   background: #FFFFFF;
@@ -1154,6 +1163,9 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-size: 14px;
   width: 100%;
   font-family: "Montserrat";
+}
+.modal__policy a {
+  display: unset;
 }
 .modal__cross {
   cursor: pointer;
@@ -1784,6 +1796,10 @@ h1, h2, h3, h4, h5, h6, p, a {
     justify-content: space-evenly;
   }
 }
+.modal__wrapper {
+  padding: 20px;
+}
+
 @media (max-width: 1280px) {
   .unit__half {
     width: 50%;

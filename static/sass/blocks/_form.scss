@@ -2,7 +2,18 @@
   margin: 40px 0 40px;
   button{
     padding: 20px;
-}
+  }
+
+  &__policy{
+    font-size: 14px;
+    width: 100%;
+    font-family: 'Montserrat';
+    margin-bottom: 20px;
+    a{
+        display: unset;
+    }
+  }
+
   &__wrapper {
     padding: 20px;
     background: #FFFFFF;
