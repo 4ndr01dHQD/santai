@@ -34,10 +34,10 @@
     function open_menu_mobile(){
         if($(".menu_mobile").is(":visible")){
             $(".menu_mobile").hide()
-            $(".menu_mobile").css('overflow-y', 'unset')
+            $("body").css('overflow', 'unset')
         }else{
             $(".menu_mobile").css('display', 'flex')
-            $(".menu_mobile").css('overflow-y', 'auto')
+            $("body").css('overflow', 'hidden')
         }
 
     }
