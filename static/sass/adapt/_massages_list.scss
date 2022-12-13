@@ -33,6 +33,9 @@
             padding: 20px;
         }
     }
+    .massages__title{
+        font-size: 60px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -40,5 +43,16 @@
         &__item {
             font-size: 14px;
         }
+    }
+}
+
+@media (max-width: 576px) {
+    .massages_list {
+        &__item {
+            font-size: 14px;
+        }
+    }
+    .massages__title{
+        font-size: 40px; 
     }
 }

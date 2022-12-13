@@ -282,6 +282,10 @@ def promotions(request):
     return render(request, 'promotions.html')
 
 
+def spa(request):
+    return render(request, 'spa.html')
+
+
 @api_view(['POST'])
 def orders(request):
     serializer = OrderSerializer(data=request.data)
