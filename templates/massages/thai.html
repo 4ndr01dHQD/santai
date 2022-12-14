@@ -71,22 +71,8 @@
 {% include '../components/modal.html' %}
 
 
-<div class="unit">
-    <div class="container">
-        <div class="unit__bottom">
-            <a href="/massages/" class="unit__bottom__link">
-                Все услуги
-                <img src="/media/icons/arrow small.png" alt="">
-            </a>
-            <p class="unit__bottom__descr">
-                Обретите баланс, раскройте чакры посетив нас.<br>
-                Познакомтесь с настоящими мастерами, наследниками древних традиций, прямиком из тайланда.<br>
-                Команда Сантай поможет расслабиться и получить незабываемые ощущения каждому не оставив равнодушным
-                никого.
-            </p>
-        </div>
-    </div>
-</div>
+{% include '../components/services.html' %}
+
 
 {% include '../components/form.html' with form_type=1 %}
 

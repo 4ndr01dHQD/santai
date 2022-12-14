@@ -1005,6 +1005,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .unit__descr__item img {
   height: 25px;
+  margin-right: 5px;
 }
 .unit__descr__card {
   background: #FFFFFF;

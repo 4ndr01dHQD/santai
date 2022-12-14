@@ -147,95 +147,96 @@ MASSAGES = [
     },
 ]
 
+CAROUSEL_MASSAGE = [
+    {
+        'title': 'Тайский массаж',
+        'url': 'thai',
+        'img': 'buddha',
+        'price': '2400'
+    },
+    {
+        'title': 'Балийский массаж',
+        'url': 'bali',
+        'img': 'flower',
+        'price': '3200'
+    },
+    {
+        'title': 'Гавайский массаж Ломи-Ломи',
+        'url': 'hawaii',
+        'img': 'hawaii',
+        'price': '3200'
+    },
+    {
+        'title': 'Slim массаж',
+        'url': 'slim',
+        'img': 'massage',
+        'price': '3400'
+    },
+    {
+        'title': 'Массаж шейно-воротниковой зоны + спина',
+        'url': 'neck',
+        'img': 'facial-treatment',
+        'price': '1400'
+    },
+    {
+        'title': 'Foot массаж',
+        'url': 'foot',
+        'img': 'foot',
+        'price': '1400'
+    },
+    {
+        'title': 'SANTAI массаж',
+        'url': 'santai',
+        'img': 'santai',
+        'price': '3400'
+    },
+    {
+        'title': 'Свеча любви',
+        'url': 'love_candle',
+        'img': 'love_candle',
+        'price': '3200'
+    },
+]
+
 
 def main(request):
-    massages = [
-        {
-            'title': 'Тайский массаж',
-            'url': 'thai',
-            'img': 'buddha',
-            'price': '2400'
-        },
-        {
-            'title': 'Балийский массаж',
-            'url': 'bali',
-            'img': 'flower',
-            'price': '3200'
-        },
-        {
-            'title': 'Гавайский массаж Ломи-Ломи',
-            'url': 'hawaii',
-            'img': 'hawaii',
-            'price': '3200'
-        },
-        {
-            'title': 'Slim массаж',
-            'url': 'slim',
-            'img': 'massage',
-            'price': '3400'
-        },
-        {
-            'title': 'Массаж шейно-воротниковой зоны + спина',
-            'url': 'neck',
-            'img': 'facial-treatment',
-            'price': '1400'
-        },
-        {
-            'title': 'Foot массаж',
-            'url': 'foot',
-            'img': 'foot',
-            'price': '1400'
-        },
-        {
-            'title': 'SANTAI массаж',
-            'url': 'santai',
-            'img': 'santai',
-            'price': '3400'
-        },
-        {
-            'title': 'Свеча любви',
-            'url': 'love_candle',
-            'img': 'love_candle',
-            'price': '3200'
-        },
-    ]
-    return render(request, 'main.html', context={'massages': massages})
+    return render(request, 'main.html', context={'massages': CAROUSEL_MASSAGE})
 
 
 def thai(request):
-    return render(request, 'massages/thai.html')
+    return render(request, 'massages/thai.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def bali(request):
-    return render(request, 'massages/bali.html')
+    return render(request, 'massages/bali.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def slim(request):
-    return render(request, 'massages/slim.html')
+    return render(request, 'massages/slim.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def neck(request):
-    return render(request, 'massages/neck.html')
+    return render(request, 'massages/neck.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def foot(request):
-    return render(request, 'massages/foot.html')
+    return render(request, 'massages/foot.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def stone(request):
-    return render(request, 'massages/stone.html')
+    return render(request, 'massages/stone.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def herbal(request):
-    return render(request, 'massages/herbal.html')
+    return render(request, 'massages/herbal.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def herbal_bags(request):
-    return render(request, 'massages/herbal_bags.html')
+    return render(request, 'massages/herbal_bags.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def oil(request):
-    return render(request, 'massages/oil.html')
+    return render(request, 'massages/oil.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def contacts(request):
@@ -247,27 +248,27 @@ def policy(request):
 
 
 def hawaii(request):
-    return render(request, 'massages/hawaii.html')
+    return render(request, 'massages/hawaii.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def santai(request):
-    return render(request, 'massages/santai.html')
+    return render(request, 'massages/santai.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def love_candle(request):
-    return render(request, 'massages/love_candle.html')
+    return render(request, 'massages/love_candle.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def oil_four_hands(request):
-    return render(request, 'massages/oil_four_hands.html')
+    return render(request, 'massages/oil_four_hands.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def shiatsu(request):
-    return render(request, 'massages/shiatsu.html')
+    return render(request, 'massages/shiatsu.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def bamboo(request):
-    return render(request, 'massages/bamboo.html')
+    return render(request, 'massages/bamboo.html', context={"massages": CAROUSEL_MASSAGE})
 
 
 def certificate(request):
