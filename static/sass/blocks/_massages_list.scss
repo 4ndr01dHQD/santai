@@ -1,4 +1,5 @@
 .massages_list {
+  margin: 40px 0;
     &__title {
       font-family: 'Philosopher';
       font-style: normal;
@@ -6,6 +7,10 @@
       font-size: 40px;
       line-height: 1.1;
       color: #101010;
+    }
+    &__author_full_name{
+        width: 100%;
+        text-align: end !important;
     }
   
     &__item {

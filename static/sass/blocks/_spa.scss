@@ -1,5 +1,5 @@
 .spa {
-    margin-top: 20px;
+    margin: 40px 0;
 
 
     &__list__wrapper{
@@ -24,6 +24,7 @@
         border-radius: 10px;
         margin-bottom: 40px;
         flex-direction: column;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
         
         img{
             max-height: 262px;
