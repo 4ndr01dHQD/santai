@@ -1,5 +1,5 @@
 .unit {
-  padding: 20px 0 0;
+  margin: 40px 0;
 
   &__description {
     font-family: 'Montserrat';
@@ -95,7 +95,7 @@
 
   &__descr {
     display: flex;
-    margin-top: 40px;
+    margin: 30px 0;
     justify-content: space-between;
 
     &__half {
