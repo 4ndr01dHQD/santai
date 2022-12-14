@@ -1535,7 +1535,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 @media (max-width: 576px) {
   .main {
-    min-height: unset;
+    min-height: 300px;
     height: 40vh;
   }
   .main_header {
@@ -1616,6 +1616,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     border-radius: 10px;
     padding: 20px;
     line-height: 1.1;
+    margin-top: 10px;
   }
   .massages_list__item__icon {
     width: 25px;
