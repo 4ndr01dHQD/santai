@@ -47,7 +47,7 @@
     &__times{
         &__wrapper{
             display: flex;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         &__option{
             
@@ -94,7 +94,6 @@
     }
 
     &__sum{
-        color: #aaaaaa;
         display: flex;
         justify-content: space-between;
         font-family: 'Montserrat';
@@ -102,7 +101,7 @@
         font-weight: 500;
         padding: 10px;
         border-radius: 10px;
-        margin-bottom: 20px;
+        margin: 20px 0;
     }
 
     &__policy{

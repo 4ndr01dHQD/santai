@@ -28,12 +28,12 @@
             </div>
             <div class="certificate__times__wrapper">
                 <div class="certificate__times__option">
-                    <input type="radio" checked value="2400" name="time" id="60_minutes">
+                    <input type="radio" checked value="60" name="time" id="60_minutes">
                     <label for="60_minutes" >60 минут</label>
 
                 </div>
                 <div class="certificate__times__option">
-                    <input type="radio" value="3400" name="time" id="90_minutes">
+                    <input type="radio" value="90" name="time" id="90_minutes">
                     <label for="90_minutes" >90 минут</label>
                 </div>
             </div>
@@ -43,7 +43,7 @@
              </div>
             <div  class="certificate__sum">
                 <p>Итого</p>
-                <p class="certificate__sum__text" >2400 Руб</p>
+                <p class="certificate__sum__text" >2400 ₽</p>
             </div>
             <p class="certificate__policy">
                 <span>Нажимая на кнопку, Вы соглашаетесь с</span> <a href="/policy/">Политикой конфиденциальности</a>
@@ -106,7 +106,7 @@
               `<label for="${time}_minutes" >${time} минут</label>` +
               '                </div>')
               if(!set_selected){
-                  $('.certificate__sum__text').text(`${data.prices[time]} Руб`)
+                  $('.certificate__sum__text').text(`${data.prices[time]} ₽`)
               }
               set_selected = true
           }
@@ -114,7 +114,8 @@
 
          $(document).on("click",'.certificate__times__wrapper div input[type="radio"]', function(event){
              const sum = $('.certificate__massages').select2('data')[0]['prices'][event.target.value]
-             $('.certificate__sum__text').text(`${sum} Руб`)
+
+             $('.certificate__sum__text').text(`${sum} ₽`)
           });
 
          $(".certificate form").on('submit', async function (event){
@@ -141,5 +142,8 @@
          })
 
     });
+    function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
 </script>
 {% endblock %}
