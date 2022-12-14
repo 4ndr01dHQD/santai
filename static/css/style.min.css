@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .main {
-  height: 80vh;
+  height: 70vh;
   background: url("/media/img/bg.png");
   background-size: cover;
   position: relative;
@@ -1517,6 +1517,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 @media (max-width: 768px) {
   .main {
     min-height: 400px;
+    height: 60vh;
   }
   .main_header {
     height: 90px;
@@ -1534,7 +1535,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 @media (max-width: 576px) {
   .main {
-    min-height: 300px;
+    min-height: unset;
+    height: 40vh;
   }
   .main_header {
     height: 90px;
