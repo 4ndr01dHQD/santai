@@ -1,0 +1,52 @@
+<section class="services">
+
+    <div class="container services__top__wrapper">
+        <h2 class="services__title">
+            Услуги
+        </h2>
+        <a href="/massages/" class="special__link">
+            Все услуги
+            <img src="media/icons/arrow small.png" alt=">">
+        </a>
+    </div>
+    <div class="services__wrapper owl-carousel owl-theme">
+        {% for massage in massages %}
+        <a href="/massages/{{massage.url}}" class="services__item item">
+
+            <img class="services__item__img" src="/media/img/massages/{{massage.url}}.png" alt="">
+
+            <div class="services__item__descr">
+                <div class="services__item__descr__top">
+                    <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
+                    <p>от {{massage.price}} ₽</p>
+                </div>
+
+                <p>{{massage.title}}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+
+<script>
+    $(".services .owl-carousel").owlCarousel({
+        margin: 10,
+        loop: true,
+        stagePadding: 50,
+        responsive: {
+            0: {
+                items: 1,
+                mergeFit: true
+            },
+            678: {
+                items: 2,
+                mergeFit: true
+            },
+            1000: {
+                items: 3,
+                mergeFit: true
+            }
+        }
+    });
+</script>

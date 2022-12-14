@@ -1,0 +1,38 @@
+<section class="gallery">
+    <div class="container">
+        <h2 class="gallery__title">
+            Галерея
+        </h2>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="item"><img src="/media/img/galleries/DSC08588.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08733.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08603.JPG" alt="massage"></div>
+        <div class="item"><img src="/media/img/galleries/DSC08597.JPG" alt="massage"></div>
+        <!--        <img src="/media/img/galleries/DSC08729.JPG" alt="massage">-->
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $(".gallery .owl-carousel").owlCarousel({
+            margin: 10,
+            loop: true,
+            stagePadding: 50,
+            responsive: {
+                0: {
+                    items: 1,
+                    mergeFit: true
+                },
+                678: {
+                    items: 2,
+                    mergeFit: true
+                },
+                1000: {
+                    items: 3,
+                    mergeFit: true
+                }
+            }
+        });
+    });
+
+</script>

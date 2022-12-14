@@ -61,6 +61,10 @@
         }
         &__item{
             width: 90%;
+
+            &__descr{
+                font-size: 14px;
+            }
         }
     }
  }

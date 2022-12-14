@@ -1,28 +1,25 @@
 .order {
-  margin: 0 auto;
-  padding: 20px 0;
-  position: relative;
 
+  margin: 30px 0;
+  width: 100%;
+  
   &__wrapper {
-    margin: 100px 0 0;
     padding: 20px;
-    background: #D7B66F;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
-    border-radius: 15px;
-    position: relative;
-  }
-
-  &__bottom {
-    margin-top: 30px;
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    margin-right: 300px;
+    flex-direction: column;
+    background: #D7B66F;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    border-radius: 15px;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
   }
 
   &__title {
     font-family: 'Philosopher';
     font-style: normal;
+    margin-bottom: 40px;
     font-weight: 500;
     font-size: 40px;
     line-height: 1.1;
@@ -33,11 +30,11 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
+    width: 55%;
     font-size: 18px;
     line-height: 27px;
     color: #FFFFFF;
     text-align: left;
-    width: 45%;
   }
 
   &__image {
@@ -46,8 +43,8 @@
     bottom: 0;
     max-width: 200px;
   }
-
     button{
+      width: 40%;
       font-size: 16px;
     }
 

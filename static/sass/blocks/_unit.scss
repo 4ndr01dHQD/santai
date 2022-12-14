@@ -16,7 +16,7 @@
   &__white {
     padding: 30px;
     background: #FFFFFF;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
     border-radius: 15px;
   }
 
@@ -145,7 +145,7 @@
       display: flex;
       align-items: center;
       list-style-type: none;
-      box-shadow: 3px 3px 10px rgb(0 0 0 / 27%);
+      box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
       padding: 20px;
       border-radius: 10px;
 
@@ -224,7 +224,7 @@
       margin-top: 20px;
       padding: 20px;
       background: #FFFFFF;
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
+      box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
       border-radius: 15px;
       font-family: 'Montserrat';
       font-style: normal;

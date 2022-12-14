@@ -39,37 +39,10 @@
         <img src="media/img/stones.png" alt="" class="descr__image">
     </div>
 </section>
-<section class="services">
 
-    <div class="container">
-        <h2 class="services__title">
-            Услуги
-        </h2>
-    </div>
-    <div class="services__wrapper owl-carousel owl-theme">
-        {% for massage in massages %}
-        <a href="/massages/{{massage.url}}" class="services__item item">
+    {% include './components/services.html' %}
 
-            <img class="services__item__img" src="/media/img/massages/{{massage.url}}.png" alt="">
 
-            <div class="services__item__descr">
-                <div class="services__item__descr__top">
-                    <img src="/media/icons/services/{{massage.img}}.png" class="services__item__icon" alt="">
-                    <p>от {{massage.price}} ₽</p>
-                </div>
-
-                <p>{{massage.title}}</p>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
-    <div class="container">
-        <a href="/massages/" class="special__link">
-            Все услуги
-            <img src="media/icons/arrow small.png" alt=">">
-        </a>
-    </div>
-</section>
 <section class="about">
     <div class="container">
         <div class="about__wrapper">
@@ -127,47 +100,13 @@
 <!--    </div>-->
 <!--</section>-->
 
-<section class="gallery">
-    <div class="container">
-        <h2 class="gallery__title">
-            Галерея
-        </h2>
-    </div>
-    <div class="owl-carousel owl-theme">
-        <div class="item"><img src="/media/img/galleries/DSC08588.JPG" alt="massage"></div>
-        <div class="item"><img src="/media/img/galleries/DSC08733.JPG" alt="massage"></div>
-        <div class="item"><img src="/media/img/galleries/DSC08603.JPG" alt="massage"></div>
-        <div class="item"><img src="/media/img/galleries/DSC08597.JPG" alt="massage"></div>
-        <!--        <img src="/media/img/galleries/DSC08729.JPG" alt="massage">-->
-    </div>
-</section>
+{% include './components/gallery.html' %}
+
 
 {% include './components/modal.html' %}
 
-<section class="order">
-    <div class="container">
-        <div class="order__wrapper">
-            <h2 class="order__title">
-                Запишитесь на массаж прямо сейчас
+{% include './components/order.html' %}
 
-            </h2>
-            <div class="order__bottom">
-                <p class="order__subtitle">
-                        <span class="mobile__hide">
-                            Свяжитесь с нами и администратор подберет подходящую для вас программу
-                        </span>
-                    <span class="mobile__show">
-                            Свяжитесь с нами и администратор<br> подберет подходящую для вас<br> программу
-                        </span>
-                </p>
-                <button class="button_whiteall open__modal button_to_bordered_white">
-                    Записаться
-                </button>
-            </div>
-            <img src="media/img/тайка 14.png" alt="#" class="order__image">
-        </div>
-    </div>
-</section>
 
 <section class="reviews container">
     <div class="reviews__item mobile__hide">
@@ -183,48 +122,4 @@
             массажа Сантай — Яндекс.Карты</a>
     </div>
 </section>
-<script>
-    $(document).ready(function () {
-        $(".gallery .owl-carousel").owlCarousel({
-            margin: 10,
-            loop: true,
-            stagePadding: 50,
-            responsive: {
-                0: {
-                    items: 1,
-                    mergeFit: true
-                },
-                678: {
-                    items: 2,
-                    mergeFit: true
-                },
-                1000: {
-                    items: 3,
-                    mergeFit: true
-                }
-            }
-        });
-
-        $(".services .owl-carousel").owlCarousel({
-            margin: 10,
-            loop: true,
-            stagePadding: 50,
-            responsive: {
-                0: {
-                    items: 1,
-                    mergeFit: true
-                },
-                678: {
-                    items: 2,
-                    mergeFit: true
-                },
-                1000: {
-                    items: 3,
-                    mergeFit: true
-                }
-            }
-        });
-    });
-
-</script>
 {% endblock %}

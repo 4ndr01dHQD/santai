@@ -52,12 +52,13 @@ $yellow: #D7B66F;
     border-color:#FFFFFF;
     background: unset;
     color: white;
+    -webkit-filter: drop-shadow(1px 1px 3px white);
   }
 
   &_to_bordered_yellow:hover {
     border-color:#D7B66F;
     color:#D7B66F;
-    -webkit-filter: drop-shadow(5px 5px 10px #D7B66F);
+    -webkit-filter: drop-shadow(1px 1px 3px #D7B66F);
     background: unset;
   }
 
