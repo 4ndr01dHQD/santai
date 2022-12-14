@@ -1,14 +1,14 @@
 <div class="modal">
-    <img class="modal__close" src="/media/icons/cross.png" alt="close">
     <form class="modal__wrapper">
         {% csrf_token %}
+        <img class="modal__cross" src="/media/icons/cross.png" alt="close">
         <div class="modal__title">Получить консультацию</div>
         <p class="modal__subtitle">
             Оставьте заявку, мы свяжемся с вами в ближайшее время.
         </p>
         <input type="text" name='name' required placeholder="Имя" class="modal__input">
         <input type="text" name='phone' required placeholder="Телефон" class="modal__input">
-        <p class="modal__policy" >
+        <p class="modal__policy">
             Нажимая на кнопку, вы соглашаетесь с <a href="/policy/">Политикой конфиденциальности</a>
         </p>
         <button type="submit" class="button_yellow modal__button button_to_bordered_yellow">

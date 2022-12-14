@@ -26,7 +26,6 @@
 
     &__img{
       border-radius: 10px;
-      filter: saturate(90%) blur(1.5px);
     }
     
     &__descr{
@@ -69,7 +68,7 @@
   }
 
   &__item:hover > img{
-    filter: unset;
+    filter: brightness(90%)
   }
 
   &__item:hover > div img{

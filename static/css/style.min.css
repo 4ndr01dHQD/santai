@@ -168,7 +168,8 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: #fff;
 }
 .header__menu__link__phone {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 500;
 }
 .header__menu__link img {
   height: 25px;
@@ -323,7 +324,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .services__item__img {
   border-radius: 10px;
-  filter: saturate(90%) blur(1.5px);
 }
 .services__item__descr {
   position: absolute;
@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: #D7B66F;
 }
 .services__item:hover > img {
-  filter: unset;
+  filter: brightness(90%);
 }
 .services__item:hover > div img {
   filter: invert(81%) sepia(51%) saturate(415%) hue-rotate(342deg) brightness(88%) contrast(89%) !important;
@@ -694,7 +694,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   margin: 40px 0;
 }
 .contacts__title {
-  margin-top: 20px;
+  margin: 20px 0;
   font-family: "Philosopher";
   font-style: normal;
   font-weight: 400;
@@ -857,7 +857,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .menu_mobile__soc_links {
   display: flex;
-  width: 186px;
+  width: 152px;
   justify-content: space-between;
 }
 .menu_mobile__soc_links img {
@@ -1176,15 +1176,19 @@ h1, h2, h3, h4, h5, h6, p, a {
 .modal_active {
   display: flex;
 }
-.modal__close {
+.modal__cross {
   position: absolute;
-  right: 40px;
-  top: 40px;
+  right: 20px;
+  top: 20px;
+  height: 25px;
+  width: 25px;
   cursor: pointer;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(236deg) brightness(112%) contrast(101%);
 }
 .modal__wrapper {
   margin: 0 10px;
   background: #fff;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1281,6 +1285,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
+  margin-bottom: 40px;
   line-height: 1.1;
   color: #101010;
 }
@@ -1428,7 +1433,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 .promotions__item__bottom button {
   padding: 15px;
   max-height: 60px;
-  width: 80%;
+  width: 60%;
   border-radius: 10px;
 }
 
@@ -1981,29 +1986,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 @media (max-width: 567px) {
   .footer__links {
     justify-content: space-evenly;
-  }
-}
-@media (max-width: 840px) {
-  .modal__close {
-    position: absolute;
-    right: 60px;
-    top: 20px;
-    cursor: pointer;
-    height: 30px;
-  }
-}
-@media (max-width: 760px) {
-  .modal__close {
-    position: absolute;
-    right: 40px;
-    top: 20px;
-    cursor: pointer;
-    height: 30px;
-  }
-}
-@media (max-width: 678px) {
-  .modal {
-    padding-top: 50px;
   }
 }
 @media (max-width: 1280px) {
