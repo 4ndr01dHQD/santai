@@ -4,13 +4,19 @@
     width: 100vw;
     height: 100vh;
     z-index: 150;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.548);
     top: 0;
     left: 0;
     justify-content: center;
     align-items: center;
     &_active {
         display: flex;
+    }
+    &__close{
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        cursor: pointer;
     }
     &__wrapper {
         margin: 0 10px;

@@ -1,5 +1,33 @@
-.modal{
-    &__wrapper{
-        padding: 20px;
+@media (max-width: 840px) {
+    .modal{
+        &__close{
+            position: absolute;
+            right: 60px;
+            top: 20px;
+            cursor: pointer;
+            height: 30px;
+        }
+
     }
 }
+
+@media (max-width: 760px) {
+    .modal{
+        &__close{
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            cursor: pointer;
+            height: 30px;
+        }
+
+    }
+}
+
+
+@media (max-width: 678px) {
+    .modal{
+        padding-top: 50px;
+    }
+}
+

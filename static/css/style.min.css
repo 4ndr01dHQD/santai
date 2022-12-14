@@ -1167,7 +1167,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   width: 100vw;
   height: 100vh;
   z-index: 150;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.548);
   top: 0;
   left: 0;
   justify-content: center;
@@ -1175,6 +1175,12 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .modal_active {
   display: flex;
+}
+.modal__close {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
 }
 .modal__wrapper {
   margin: 0 10px;
@@ -1977,10 +1983,29 @@ h1, h2, h3, h4, h5, h6, p, a {
     justify-content: space-evenly;
   }
 }
-.modal__wrapper {
-  padding: 20px;
+@media (max-width: 840px) {
+  .modal__close {
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    cursor: pointer;
+    height: 30px;
+  }
 }
-
+@media (max-width: 760px) {
+  .modal__close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+    height: 30px;
+  }
+}
+@media (max-width: 678px) {
+  .modal {
+    padding-top: 50px;
+  }
+}
 @media (max-width: 1280px) {
   .unit__half {
     width: 50%;
