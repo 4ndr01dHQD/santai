@@ -8,7 +8,6 @@
     font-size: 18px;
     line-height: 1.1;
     display: flex;
-    text-align: justify;
     color: #343434;
     margin-bottom: 30px;
   }
@@ -87,7 +86,10 @@
     flex-direction: column;
 
     button {
-      width: 80%;
+      width: 60%;
+      max-height: 60px;
+      border-radius: 10px;
+      padding: 10px;
     }
   }
 

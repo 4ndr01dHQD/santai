@@ -1,5 +1,6 @@
 @media (max-width: 1280px) {
     .main {
+        min-height: 550px;
         &__wrapper {
             margin-top: 50px;
         }
@@ -11,10 +12,9 @@
         }
     }
 }
-
 @media (max-width: 768px) {
     .main {
-        height: 400px;
+        min-height: 400px;
         &_header {
             height: 90px;
         }
@@ -33,7 +33,7 @@
 
 @media (max-width: 576px) {
     .main {
-        height: 300px;
+        min-height: 300px;
         &_header {
             height: 90px;
         }

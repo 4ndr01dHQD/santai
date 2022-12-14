@@ -1,5 +1,8 @@
 @media (max-width: 1280px) {
     .massages_list {
+        &__main{
+            min-height: 400px !important;
+        }
         &__item {
             padding: 30px;
             &__arrow {
@@ -40,6 +43,9 @@
 
 @media (max-width: 576px) {
     .massages_list {
+        &__main{
+            min-height: 280px !important;
+          }
         &__item {
             font-size: 14px;
         }

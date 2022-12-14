@@ -1,5 +1,10 @@
 .massages_list {
   margin: 40px 0;
+
+  &__main{
+    height: 45vh;
+    min-height: 400px !important;
+  }
     &__title {
       font-family: 'Philosopher';
       font-style: normal;

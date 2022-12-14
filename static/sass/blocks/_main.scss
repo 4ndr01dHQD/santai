@@ -3,7 +3,9 @@
   background: url('/media/img/bg.png');
   background-size: cover;
   position: relative;
-
+  &__big{
+    min-height: 600px;
+  }
   &_header {
     height: 93px;
   }
