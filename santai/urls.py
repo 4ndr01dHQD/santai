@@ -2,7 +2,7 @@ from django.urls import path
 
 from santai.views import main, bali, massages, thai, slim, neck, foot, stone, herbal_bags, oil, contacts, \
     orders, policy, hawaii, santai, love_candle, oil_four_hands, shiatsu, bamboo, certificate, create_certificate, \
-    promotions, spa, back
+    promotions, spa, back, hand_and_shoulders
 
 urlpatterns = [
     path("", main),
@@ -22,6 +22,7 @@ urlpatterns = [
     path("massages/shiatsu/", shiatsu),
     path("massages/bamboo/", bamboo),
     path("massages/back/", back),
+    path("massages/hand_and_shoulders/", hand_and_shoulders),
     path("contacts/", contacts),
     path("orders/", orders),
     path("policy/", policy),

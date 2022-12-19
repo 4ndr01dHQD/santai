@@ -154,6 +154,15 @@ MASSAGES = [
             '60': '2400',
         }
     },
+    {
+        'title': 'Массаж рук и предплечий',
+        'url': 'hand_and_shoulders',
+        'img': 'hand_and_shoulders',
+        'prices': {
+            '30': '1400',
+            '60': '2400',
+        }
+    },
 ]
 
 CAROUSEL_MASSAGE = [
@@ -298,6 +307,10 @@ def spa(request):
 
 def back(request):
     return render(request, 'massages/back.html')
+
+
+def hand_and_shoulders(request):
+    return render(request, 'massages/hand_and_shoulders.html')
 
 
 @api_view(['POST'])
