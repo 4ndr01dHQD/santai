@@ -145,6 +145,15 @@ MASSAGES = [
             '120': '5200',
         }
     },
+    {
+        'title': 'Массаж спины',
+        'url': 'back',
+        'img': 'massage',
+        'prices': {
+            '30': '1400',
+            '60': '2400',
+        }
+    },
 ]
 
 CAROUSEL_MASSAGE = [
@@ -285,6 +294,10 @@ def promotions(request):
 
 def spa(request):
     return render(request, 'spa.html')
+
+
+def back(request):
+    return render(request, 'massages/back.html')
 
 
 @api_view(['POST'])
