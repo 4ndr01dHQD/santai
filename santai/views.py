@@ -163,6 +163,15 @@ MASSAGES = [
             '60': '2400',
         }
     },
+    {
+        'title': 'Энергетический массаж головы',
+        'url': 'head',
+        'img': 'facial-treatment',
+        'prices': {
+            '30': '1400',
+            '60': '2400',
+        }
+    },
 ]
 
 CAROUSEL_MASSAGE = [
@@ -306,11 +315,15 @@ def spa(request):
 
 
 def back(request):
-    return render(request, 'massages/back.html')
+    return render(request, 'massages/back.html', context={'massages': CAROUSEL_MASSAGE})
 
 
 def hand_and_shoulders(request):
-    return render(request, 'massages/hand_and_shoulders.html')
+    return render(request, 'massages/hand_and_shoulders.html', context={'massages': CAROUSEL_MASSAGE})
+
+
+def head(request):
+    return render(request, 'massages/head.html', context={'massages': CAROUSEL_MASSAGE})
 
 
 @api_view(['POST'])

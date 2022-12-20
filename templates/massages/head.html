@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="main main_header">
+    {% include '../components/header.html' %}
+
+</section>
+
+{% include '../components/modal.html' %}
+
+<section class="unit">
+    <div class="container">
+        <div class="unit__white">
+            <div class="unit__top">
+                <h2 class="unit__title">
+                    Энергетический массаж головы
+                </h2>
+
+            </div>
+            <div class="unit__center">
+                <div class="unit__half">
+                    <img class="unit__image" src="/media/img/massages/head.jpg" alt="massage">
+                </div>
+                <div class="unit__half">
+                    <p class="unit__description">
+                        Активизируются процессы в коже головы, делая волосы более гибкими, и блестящими, снимаются
+                        головные боли, пропадает бессонница, улучшается память, достигается баланс между телом и духом.
+                    </p>
+                    <p class="unit__text unit__text_small">
+                        30 мин. 1400₽
+                    </p>
+                    <p class="unit__text">
+                        60 мин. 2400₽
+                    </p>
+                    <button class="button_yellow open__modal button_to_bordered_yellow">
+                        Записаться
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="unit__descr">
+            <div class="unit__descr__half">
+                <h2 class="unit__descr__title">
+                    Польза массажа
+                </h2>
+                <ul class="unit__descr__list">
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/person-in-bed.png" alt=""> Устраняет бессоницу
+                    </li>
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/man-in-lotus.png" alt=""> Снимает головные боли
+                    </li>
+                    <li class="unit__descr__item">
+                        <img src="/media/img/emoji/man-lifting-weights.png" alt=""> Наполняет положительной энергией и
+                        силами
+                    </li>
+                </ul>
+            </div>
+            {% include '../components/specialists_card.html' %}
+        </div>
+
+    </div>
+</section>
+
+
+{% include '../components/services.html' %}
+
+
+{% include '../components/form.html' with form_type=1 %}
+
+
+{% endblock %}
