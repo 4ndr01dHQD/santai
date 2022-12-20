@@ -10,3 +10,11 @@
      height: unset;
     padding: 5px;
 }
+
+.owl-nav{
+    display: flex;
+    justify-content: space-around;
+}
+.owl-nav button span{
+    font-size: 25px;
+}
