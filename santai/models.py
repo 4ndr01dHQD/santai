@@ -19,7 +19,7 @@ class Order(models.Model):
 class CertificateOrder(models.Model):
     name = models.CharField(verbose_name="Имя", max_length=255, blank=False)
     phone = models.CharField(verbose_name="Телефон", max_length=255, blank=False)
-    massage = models.CharField(verbose_name="Массажа", max_length=255, blank=False)
+    massage = models.CharField(verbose_name="Массаж", max_length=255, blank=False)
     time = models.IntegerField(verbose_name="Кол-во минут", blank=False)
     created_at = models.DateTimeField("Дата создания", blank=True, auto_now=True)
 
