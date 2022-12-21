@@ -28,4 +28,4 @@ def send_notification_letter(phone, name):
 def send_notification_certificate_letter(phone, name, massage, time):
     r = send_mail('Уведомление с сайта santai31.ru!',
                   f"Клиент {name} оставил заявку на покупку сертификата на массаж {massage} на {time} минут, номер обратной связи {phone}.",
-                  settings.EMAIL_HOST_USER, ['tch3r3m1s1n@gmail.com'])
+                  settings.EMAIL_HOST_USER, ['Santaispa@yandex.ru'])
