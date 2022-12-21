@@ -76,7 +76,7 @@ MASSAGES = [
         }
     },
     {
-        'title': 'Арома-ойл массаж',
+        'title': 'Тайский оил массаж',
         'url': 'oil',
         'img': 'oil',
         'prices': {

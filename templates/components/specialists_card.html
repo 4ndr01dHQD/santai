@@ -3,16 +3,19 @@
         Сеанс проводит
     </h2>
     <div class="owl-carousel owl-theme">
-        <div class="unit__descr__card">
-            <div class="unit__descr__card__wrapper">
-                <img src="/media/img/specialists/sutadta.png" alt="" class="unit__descr__card__image">
+        {% if sutadta %}
+            <div class="unit__descr__card">
+                <div class="unit__descr__card__wrapper">
+                    <img src="/media/img/specialists/sutadta.png" alt="" class="unit__descr__card__image">
+                </div>
+                <div class="unit__descr__card__bottom">
+                    <p class="unit__descr__card__title">
+                        Сутадта
+                    </p>
+                </div>
             </div>
-            <div class="unit__descr__card__bottom">
-                <p class="unit__descr__card__title">
-                    Сутадта
-                </p>
-            </div>
-        </div>
+        {% endif %}
+        {% if ketut %}
         <div class="unit__descr__card">
             <div class="unit__descr__card__wrapper">
                 <img src="/media/img/specialists/ketut.png" alt="" class="unit__descr__card__image">
@@ -23,6 +26,7 @@
                 </p>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
 
