@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 import environ
@@ -20,6 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ROOT_DIR = (
         environ.Path(__file__) - 2
 )
+env = environ.Env()
+
+READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=True)
+if READ_DOT_ENV_FILE:
+    env.read_env(str(ROOT_DIR.path('.env')))
+else:
+    raise Exception("Not found environment variables file: .env")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -136,3 +143,15 @@ STATICFILES_FINDERS = [
 
 MEDIA_ROOT = str(ROOT_DIR('media'))
 MEDIA_URL = '/media/'
+
+
+EMAIL_HOST = os.environ.get('EMAIL_HOST', "")
+EMAIL_PORT = os.environ.get('EMAIL_PORT', "")
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', "")
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', "")
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', "")
+EMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', "")
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+MANAGER_EMAIL = os.environ.get('MANAGER_EMAIL', "")
