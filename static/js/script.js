@@ -11,6 +11,7 @@ window?.addEventListener('DOMContentLoaded', () => {
     const modalCross = document.querySelector('.modal__cross');
     const openModal = document.querySelectorAll('.open__modal');
     const allow_policy = document.querySelector('.modal__allow_policy');
+    const url = 'https://b818810.yclients.com/company/767058/menu?o='
     $(allow_policy).on('change', () => {
         if (allow_policy.checked) {
             document.querySelector('.modal__button').disabled = false
@@ -20,8 +21,9 @@ window?.addEventListener('DOMContentLoaded', () => {
 
     })
     $(openModal).on('click', () => {
-        modal.classList.add('modal_active');
-        document.body.style.overflow = 'hidden';
+        window.open(url, '_blank').focus();
+        // modal.classList.add('modal_active');
+        // document.body.style.overflow = 'hidden';
     })
     $(modalCross).on('click', () => {
         modal.classList.remove('modal_active')
@@ -29,8 +31,9 @@ window?.addEventListener('DOMContentLoaded', () => {
     })
     $(modal).on('click', (e) => {
         if (!e.target.closest(".modal__wrapper")) {
-            modal.classList.remove('modal_active');
-            document.body.style.overflow = 'auto';
+            window.open(url, '_blank').focus();
+            // modal.classList.remove('modal_active');
+            // document.body.style.overflow = 'auto';
         }
     })
 
