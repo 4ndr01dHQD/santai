@@ -186,7 +186,7 @@ CAROUSEL_MASSAGE = [
         'title': 'Балийский массаж',
         'url': 'bali',
         'img': 'flower',
-        'price': '3200'
+        'price': '3400'
     },
     {
         'title': 'Гавайский массаж Ломи-Ломи',
@@ -216,13 +216,13 @@ CAROUSEL_MASSAGE = [
         'title': 'SANTAI массаж',
         'url': 'santai',
         'img': 'santai',
-        'price': '3400'
+        'price': '3600'
     },
     {
         'title': 'Свеча любви',
         'url': 'love_candle',
         'img': 'love_candle',
-        'price': '3200'
+        'price': '3600'
     },
 ]
 
