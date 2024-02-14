@@ -1,0 +1,240 @@
+.unit {
+  margin: 40px 0;
+
+  &__description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    display: flex;
+    color: #343434;
+    margin-bottom: 30px;
+  }
+
+  &__white {
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    border-radius: 15px;
+  }
+
+  &__title {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1;
+    color: $yellow;
+  }
+
+  &__arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+  }
+
+  &__arrow {
+    img {
+      height: 30px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__center {
+    display: flex;
+    gap: 130px;
+  }
+
+  &__image {
+    border-radius: 20px;
+    max-width: 545px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  &__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    display: flex;
+    text-align: justify;
+    color: #343434;
+    margin-bottom: 30px;
+
+    img {
+      margin-right: 10px;
+      height: 20px;
+      width: 20px;
+    }
+
+    &_small {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__half {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      width: 60%;
+      max-height: 60px;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    margin: 30px 0;
+    justify-content: space-between;
+
+    &__half {
+      width: 50%;
+      .owl-carousel{
+        
+        max-width: 340px;
+      }
+      &_right {
+        max-width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+      }
+    }
+
+    &__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 1.1;
+      color: #101010;
+    }
+
+    &__text {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: #101010;
+      margin: 20px 0;
+    }
+
+    &__list {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      padding: unset;
+      color: #101010;
+    }
+
+    &__item {
+      line-height: 30px;
+      margin-top: 10px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+      padding: 20px;
+      border-radius: 10px;
+
+      img{
+        height: 25px;
+        margin-right: 5px;
+      }
+
+    }
+
+    &__card {
+      background: #FFFFFF;
+      border-radius: 15px;
+      max-width: 340px;
+      margin-top: 10px;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+
+      &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__image {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+
+      &__bottom {
+        padding: 15px;
+      }
+
+      &__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.1;
+        color: #101010;
+      }
+
+      &__subtitle {
+        margin-top: 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.1;
+        color: #101010;
+      }
+    }
+  }
+
+  &__bottom {
+    &__link {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 37px;
+      color: #101010;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 10px;
+      }
+    }
+
+    &__descr {
+      margin-top: 20px;
+      padding: 20px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+      border-radius: 15px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 29px;
+      color: #343434;
+    }
+  }
+}
